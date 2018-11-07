@@ -1,18 +1,26 @@
 extends libs/default
 
+include ../components/section-1/section-1
+include ../components/section-2/section-2
+
 block variables
-    - var title = 'Intro page'
-    - var description = 'This is a intro page of Airplanet site.'
-    - var keywords = 'Airlines, flights, tickets'
+    - var title = 'title'
+    - var description = 'description'
+    - var keywords = 'keywords'
 
 block links
     link(rel="stylesheet" href="css/main.css")
 
 block scriptsToHead
+    script(src="https:////cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+    script(src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js")
 
 block content
-    div.page__wrapper
-        include ../components/section-1/section-1
+    div.page__wrapper#fullpage
+        section.section
+            +section-1
+        section.section
+            +section-2
 
 block scriptsToBody
     script(src='js/bundle.js')

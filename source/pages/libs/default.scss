@@ -3,23 +3,4 @@
 @import "mixins";
 @import "fonts";
 @import "sprite.scss";
-
-* {
-    box-sizing: border-box;
-}
-
-html, 
-body {
-    height: 100%;
-}
-
-body {
-    font-family: $font-family;
-    font-size: 18px;
-    overflow: hidden;
-}
-
-img {
-    display: block;
-    width: 100%;
-}
+@import "grid";
