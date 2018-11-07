@@ -1,7 +1,6 @@
 .idea
 .DS_Store
 node_modules
-public
 package-lock.json
 
 # Winodws image file caches

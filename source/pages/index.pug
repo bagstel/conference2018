@@ -2,6 +2,10 @@ extends libs/default
 
 include ../components/section-1/section-1
 include ../components/section-2/section-2
+include ../components/section-3/section-3
+include ../components/section-4/section-4
+include ../components/section-5/section-5
+include ../components/section-6/section-6
 
 block variables
     - var title = 'title'
@@ -17,10 +21,12 @@ block scriptsToHead
 
 block content
     div.page__wrapper#fullpage
-        section.section
-            +section-1
-        section.section
-            +section-2
+        +section-1
+        +section-2
+        +section-3
+        +section-4
+        +section-5
+        +section-6
 
 block scriptsToBody
     script(src='js/bundle.js')
