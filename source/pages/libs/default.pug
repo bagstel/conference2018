@@ -1,0 +1,27 @@
+include mixin
+include variables
+
+block variables
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="description", content=description)
+        meta(name="keywords", content=keywords)
+        meta(http-equiv="x-ua-compatible", content="ie=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        link(rel="icon" href="./favicon.png")
+
+        block links
+        <!--[if lte IE 9]>
+            link(rel="stylesheet", href="css/ie.css")
+        <![endif]-->
+
+        block scriptsToHead
+
+        title #{title}
+    body
+        block content
+        block scriptsToBody

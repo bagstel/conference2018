@@ -1,0 +1,18 @@
+extends libs/default
+
+block variables
+    - var title = 'Intro page'
+    - var description = 'This is a intro page of Airplanet site.'
+    - var keywords = 'Airlines, flights, tickets'
+
+block links
+    link(rel="stylesheet" href="css/main.css")
+
+block scriptsToHead
+
+block content
+    div.page__wrapper
+        include ../components/section-1/section-1
+
+block scriptsToBody
+    script(src='js/bundle.js')
