@@ -4,27 +4,22 @@
     align-items: center;
     background: #000;
     height: 70px;
-    padding: 0 1%;
+    padding: 0 45px 0 37px;
     &__logo {
         a {
             display: block;
-            width: 150px;
-            height: 39px;
+            width: 200px;
+            height: 50px;
             background: url("../images/logo.png") no-repeat center;
             background-size: cover;
-        }
-    }
-    &__navigation {
-    }
-    @media screen and (max-width: 960px) {
-        &__navigation {
-            display: none;
         }
     }
 }
 
 .navigation {
-    padding: 0 40px;
+    @media screen and (max-width: 960px) {
+        display: none;
+    }
     &__list {
         display: flex;
         margin: 0;
@@ -35,17 +30,16 @@
         a {
             color: #A2BEEE;
             text-decoration: none;
-            margin-left: 50px;
+            margin-left: 43px;
             line-height: 30px;
             &.access_button {
-                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 137px;
+                height: 36px;
                 background: #ED0058;
-                font-weight: 600;
-                font-size: 18px;
-
-                padding: 0 20px;
             }
         }
     }
 }
-

@@ -6,6 +6,10 @@ include ../components/section-3/section-3
 include ../components/section-4/section-4
 include ../components/section-5/section-5
 include ../components/section-6/section-6
+include ../components/section-7/section-7
+include ../components/section-8/section-8
+include ../components/section-9/section-9
+include ../components/footer/footer
 
 block variables
     - var title = 'title'
@@ -16,8 +20,6 @@ block links
     link(rel="stylesheet" href="css/main.css")
 
 block scriptsToHead
-    script(src="https:////cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
-    script(src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js")
 
 block content
     div.page__wrapper#fullpage
@@ -27,6 +29,10 @@ block content
         +section-4
         +section-5
         +section-6
+        +section-7
+        +section-8
+        +section-9
+        +footer
 
 block scriptsToBody
     script(src='js/bundle.js')

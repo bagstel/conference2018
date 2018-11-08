@@ -1,48 +1,46 @@
 .section-1 {
-    &__wrapper{
+    color: #fff;
+    &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
         background: url("../images/erth.png") no-repeat center;
         background-size: cover;
     }
     &__date {
-        font-size: 2.5rem;
+        margin-top: 51px;
+        font-size: 29px;
         text-align: center;
         color: #A2BEEE;
     }
     &__title {
+        margin-top: 45px;
         font-weight: bold;
-        font-size: 3.89rem;
-        line-height: 4.44rem;
+        font-size: 70px;
         text-align: center;
-        color: #FFFFFF;
-        margin-top: 25px;
     }
     &__text {
-        line-height: 2.44rem;
-        font-size: 2rem;
-        text-align: center;
-        color: #FFFFFF;
         margin-top: 51px;
+        font-size: 44px;
+        line-height: 36px;
+        text-align: center;
     }
     &__button {
         margin-top: 60px;
         a {
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 240px;
+            height: 64px;
             background: #ED0058;
-            font-weight: 600;
-            font-size: 1.27rem;
-            line-height: 2.77em;
-            text-align: center;
+            color: inherit;
+            font-size: 23px;
             text-decoration: none;
-            padding: 0 44px;
-            color: #FFFFFF;
         }
     }
     &__counter {
-        margin-top: 60px;
+        margin: 48px 0;
     }
 }

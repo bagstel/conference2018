@@ -1,3 +1,83 @@
 .section-3 {
-    height: 100vh;
+    min-height: 100vh;
+    background: #EAF1FB;
+    padding-bottom: 100px;
+    &__title {
+        font-size: 70px;
+        color: #242424;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 0;
+        padding-top: 75px;
+        margin-bottom: 75px;
+    }
+}
+.speaker {
+    width: 342px;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 35px;
+    &__col {
+        margin: 0 19px;
+    }
+    &__photo {
+    }
+    &__info {
+        padding: 27px 30px;
+    }
+    &__name {
+        //font-family: Titillium Web;
+        font-weight: 600;
+        font-size: 23px;
+        color: #242528;
+        margin-bottom: 20px;
+    }
+    &__descr {
+        font-size: 18px;
+        color: #969797;
+    }
+}
+.speakers {
+    &__slider {
+        position: relative;
+    }
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        align-items: center;
+        margin: 0 auto;
+        height: 1000px;
+        width: 1140px;
+        position: relative;
+        @include laptop {
+            width: 668px;
+        }
+        @include tablets {
+            width: 300px;
+        }
+    }
+    &__list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .5s all linear;
+        display: flex;
+    }
+    &__contrls {
+    }
+    &__contrl {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 55px;
+        height: 140px;
+        cursor: pointer;
+        &--prev {
+            left: 20px;
+        }
+        &--next {
+            right: 20px;
+        }
+    }
 }

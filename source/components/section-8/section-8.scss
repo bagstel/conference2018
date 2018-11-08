@@ -1,0 +1,35 @@
+.section-8 {
+    background: #E5E5E5;
+    padding-top: 70px;
+    &__title {
+        font-weight: bold;
+        font-size: 70px;
+        text-align: center;
+        color: #242424;
+        margin-bottom: 70px;
+    }
+    &__partners {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    &__partner {
+        max-width: 300px;
+        margin: 0 150px 50px;
+    }
+    &__text {
+        font-size: 23px;
+        color: #242424;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__btn {
+        text-align: center;
+    }
+}
+.btn--red {
+    color: #fff;
+    background: #ED0058;
+}
