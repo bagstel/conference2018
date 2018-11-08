@@ -1,44 +1,43 @@
 .social {
-  background: #242528;
-  padding: 50px 0 60px;
-  &__title {
-    font-size: 23px;
-    text-align: center;
-    color: #fff;
-    @include tablets {
-      font-size: 18px;
+    background: #242528;
+    padding: 50px 0 60px;
+    &__title {
+        font-size: 23px;
+        text-align: center;
+        color: #fff;
+        @include tablets {
+            font-size: 18px;
+        }
     }
-  }
-  &__list {
-    margin: 0;
-    margin-top: 16px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  &__item {
-    list-style: none;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #FDF4FD;
-    border-radius: 4px;
-    &:not(:first-child) {
-      margin-left: 25px;
+    &__list {
+        margin: 16px 0 0 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
     }
-    img {
-      width: 30px;
-      height: 30px;
+    &__item {
+        list-style: none;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #FDF4FD;
+        border-radius: 4px;
+        &:not(:first-child) {
+            margin-left: 25px;
+        }
+        img {
+            width: 30px;
+            height: 30px;
+        }
     }
-  }
 }
 
 .copyright {
-  background: #000;
-  font-size: 18px;
-  color: #ccc;
-  padding: 26px 0;
-  text-align: center;
+    background: #000;
+    font-size: 18px;
+    color: #ccc;
+    padding: 26px 0;
+    text-align: center;
 }

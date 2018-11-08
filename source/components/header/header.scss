@@ -4,7 +4,6 @@
     align-items: center;
     background: #000;
     height: 70px;
-    //padding: 0 45px 0 37px;
     &__logo {
         padding-left: 37px;
         a {
@@ -16,6 +15,7 @@
         }
     }
 }
+
 .navigation {
     @media screen and (max-width: 960px) {
         display: none;
@@ -47,6 +47,7 @@
         }
     }
 }
+
 .burger .line {
     width: 30px;
     height: 2px;
@@ -55,9 +56,11 @@
     margin: 7px auto;
     transition: all 0.3s ease-in-out;
 }
+
 .burger:hover {
     cursor: pointer;
 }
+
 .burger {
     position: relative;
     right: 45px;
@@ -68,12 +71,25 @@
         display: block;
     }
 }
+
 .burger.active {
     position: fixed;
     top: 18px;
     right: 45px;
 }
+
 .navigation.open {
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    background: #000;
+    right: 0;
+    top: 0;
+    @media screen and (max-width: 960px) {
+        display: flex;
+        justify-content: center;
+    }
     .navigation__list {
         display: flex;
         flex-direction: column;
@@ -85,31 +101,28 @@
         margin: 20px;
         a {
             font-size: 26px;
+            margin: 0;
         }
     }
-    width: 100%;
-    height: 100vh;
-    z-index: 100;
-    position: fixed;
-    background: #000;
-    right: 0;
-    top: 0;
 }
-.burger.active .line{
+
+.burger.active .line {
     width: 30px;
 }
-.burger.active .line:nth-child(2){
+
+.burger.active .line:nth-child(2) {
     opacity: 0;
 }
-.burger.active .line:nth-child(1){
-    -webkit-transform: translateY(9px) rotate(45deg);
-    -ms-transform: translateY(9px) rotate(45deg);
-    -o-transform: translateY(9px) rotate(45deg);
+
+.burger.active .line:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
 }
-.burger.active .line:nth-child(3){
-    -webkit-transform: translateY(-9px) rotate(-45deg);
-    -ms-transform: translateY(-9px) rotate(-45deg);
-    -o-transform: translateY(-9px) rotate(-45deg);
+
+.burger.active .line:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
+}
+
+.no-scroll {
+    height: 100vh;
+    overflow: hidden;
 }

@@ -1,7 +1,6 @@
 .section-2 {
-    height: 60%;
     &__content {
-        height: 100%;
+        min-height: 400px;
         background: url("../images/Img-record.png") no-repeat center;
         background-size: cover;
         display: flex;
@@ -12,18 +11,15 @@
     }
     &__figure {
         width: 634px;
-        //height: 400px;
         margin: 50px 0 0 42%;
         position: relative;
         @include laptop {
             width: 500px;
-            //height: 320px;
             margin-left: 30%;
         }
         @include tablets {
             margin: 0;
             width: 300px;
-            //height: 280px;
         }
     }
     &__figcaption {
