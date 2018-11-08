@@ -9,3 +9,7 @@ mixin header
                 li.navigation__item: a(href="#") Sponsorship
                 li.navigation__item: a(href="#") Partners
                 li.navigation__item: a(href="#").access_button Get access
+        .header__burger
+            .burger#burger
+                - for (var x = 0; x < 3; x++)
+                    span.line

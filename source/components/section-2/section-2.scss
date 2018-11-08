@@ -12,15 +12,18 @@
     }
     &__figure {
         width: 634px;
+        //height: 400px;
         margin: 50px 0 0 42%;
         position: relative;
         @include laptop {
             width: 500px;
+            //height: 320px;
             margin-left: 30%;
         }
         @include tablets {
             margin: 0;
             width: 300px;
+            //height: 280px;
         }
     }
     &__figcaption {
