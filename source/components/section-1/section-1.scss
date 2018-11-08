@@ -9,7 +9,7 @@
         background-size: cover;
     }
     &__date {
-        margin-top: 51px;
+        margin-top: 56px;
         font-size: 29px;
         text-align: center;
         color: #A2BEEE;
@@ -19,12 +19,18 @@
         font-weight: bold;
         font-size: 70px;
         text-align: center;
+        @include tablets {
+            font-size: 40px;
+        }
     }
     &__text {
         margin-top: 51px;
         font-size: 44px;
         line-height: 36px;
         text-align: center;
+        @include tablets {
+            font-size: 22px;
+        }
     }
     &__button {
         margin-top: 60px;
@@ -41,6 +47,6 @@
         }
     }
     &__counter {
-        margin: 48px 0;
+        margin: 46px 0;
     }
 }

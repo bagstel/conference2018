@@ -37,6 +37,7 @@
         padding: 28px;
         background: #969797;
         height: 100%;
+        align-items: center;
         &.active {
             background: #2C109F;
             width: 550px;
@@ -65,11 +66,16 @@
             color: #A2BEEE;
         }
     }
+
     &__info {
         min-height: 98px;
-        padding: 25px 35px;
+        padding: 25px 35px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         &-content {
             display: flex;
+            margin-bottom: 50px;
         }
         &-image {
             width: 106px;
@@ -79,15 +85,21 @@
             overflow: hidden;
         }
         &-wrapper {
+            margin-left: 41px;
+            font-size: 23px;
             color: #242528;
         }
         &-title {
-                font-weight: 300;
                 font-size: 36px;
-
+                font-weight: 300;
         }
         &-text {
+            line-height: 35px;
+        }
+        &-duration {
+            color: #ED0058;
             font-size: 23px;
+            font-weight: 300;
         }
     }
 }

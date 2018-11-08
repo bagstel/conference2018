@@ -1,29 +1,49 @@
 .section-8 {
+    min-height: 100vh;
     background: #E5E5E5;
-    padding-top: 70px;
+    padding-top: 77px;
+    padding-bottom: 142px;
     &__title {
         font-weight: bold;
         font-size: 70px;
         text-align: center;
         color: #242424;
-        margin-bottom: 70px;
+        margin-bottom: 105px;
+        @include tablets {
+            font-size: 40px;
+        }
     }
     &__partners {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        margin-bottom: 50px;
+        max-width: 1000px;
+        margin: 0 auto 40px;
     }
     &__partner {
-        max-width: 300px;
-        margin: 0 150px 50px;
+        height: 140px;
+        width: 140px;
+        margin: 0 70px 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include tablets {
+            width: 200px;
+            height: 200px;
+            margin: 0 50px 55px;
+        }
+        @media screen and (max-width:599px) {
+            //margin: 0 20px 20px;
+            height: auto;
+            width: 80%;
+        }
     }
     &__text {
         font-size: 23px;
         color: #242424;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     &__btn {
         text-align: center;

@@ -1,10 +1,16 @@
 .section-4 {
-    height: 115%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: url("../images/Dana.png") no-repeat center;
     background-size: cover;
+    @include tablets {
+        //background-size: 850px 562px;
+        background: #cfcfcf;
+        height: 68%;
+        justify-content: center;
+    }
     &__title {
         margin-top: 68px;
         font-size: 70px;
@@ -12,22 +18,43 @@
         font-weight: bold;
         color: #242424;
         text-align: center;
+        @include tablets {
+            font-size: 33px;
+            margin-top: 20px;
+            line-height: 46px;
+        }
     }
     &__subtitle {
         display: flex;
-        margin-top: 10px;
+        margin-top: 13px;
+        @include tablets {
+            margin: 0;
+            align-items: center;
+            flex-direction: column;
+        }
     }
 }
 
 .subtitle {
+    @include tablets {
+
+    }
     &__text {
         font-size: 36px;
         color: #242528;
+        @include tablets {
+            font-size: 22px;
+            margin-top: 30px;
+        }
     }
     &__list {
         display: flex;
         margin: 0 0 0 35px;
         padding: 0;
+        @include tablets {
+            margin: 0;
+            margin-top: 30px;
+        }
     }
     &__item {
         list-style: none;

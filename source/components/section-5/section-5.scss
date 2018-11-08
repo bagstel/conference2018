@@ -6,21 +6,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 58px;
+    padding: 58px 0 68px;
     &__title {
         font-weight: bold;
         font-size: 70px;
         text-align: center;
         color: #FFFFFF;
+        @include tablets {
+            font-size: 40px;
+        }
     }
     &__subtitle {
         margin-top: 8px;
         font-size: 36px;
         color: #FFFFFF;
+        @include tablets {
+            font-size: 24px;
+            text-align: center;
+        }
     }
     &__form {
         display: flex;
         margin-top: 55px;
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+        }
         input,
         a {
             height: 64px;
@@ -31,9 +42,16 @@
             background: none;
             border: 1px solid #fff;
             outline: none;
+            @include tablets {
+                margin: 0 auto 40px;
+                width: 300px;
+            }
             &::placeholder {
                 color: #FFFFFF;
                 padding-left: 20px;
+                @include tablets {
+                    text-align: center;
+                }
             }
         }
         a {

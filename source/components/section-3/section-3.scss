@@ -8,25 +8,33 @@
         font-weight: 700;
         text-align: center;
         margin-top: 0;
-        padding-top: 75px;
-        margin-bottom: 75px;
+        padding-top: 57px;
+        margin-bottom: 55px;
+        @include laptop {
+            font-size: 50px;
+        }
     }
 }
 .speaker {
     width: 342px;
     text-align: center;
     background: #fff;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
+    @media screen and (max-width:1300px) {
+        width: 300px;
+    }
+    @include tablets {
+        width: 280px;
+    }
     &__col {
         margin: 0 19px;
     }
     &__photo {
     }
     &__info {
-        padding: 27px 30px;
+        padding: 30px 10px 30px;
     }
     &__name {
-        //font-family: Titillium Web;
         font-weight: 600;
         font-size: 23px;
         color: #242528;
@@ -34,6 +42,7 @@
     }
     &__descr {
         font-size: 18px;
+        line-height: 26px;
         color: #969797;
     }
 }
@@ -47,11 +56,12 @@
         overflow: hidden;
         align-items: center;
         margin: 0 auto;
-        height: 1000px;
+        height: 1060px;
         width: 1140px;
         position: relative;
-        @include laptop {
+        @media screen and (max-width:1300px) {
             width: 668px;
+            height: 970px;
         }
         @include tablets {
             width: 300px;
@@ -73,11 +83,29 @@
         width: 55px;
         height: 140px;
         cursor: pointer;
+        @media screen and (max-width:1300px) {
+            width: 30px;
+            height: 80px;
+            @include tablets {
+                width: 15px;
+                height: 40px;
+            }
+            svg {
+                height: 100%;
+                width: auto;
+            }
+        }
         &--prev {
-            left: 20px;
+            left: 50px;
+            @include tablets {
+                left: 0;
+            }
         }
         &--next {
-            right: 20px;
+            right: 50px;
+            @include tablets {
+                right: 0;
+            }
         }
     }
 }

@@ -18,8 +18,14 @@
     &__digit {
         font-weight: 600;
         font-size: 27.78px;
+        @include tablets {
+            font-size: 24px;
+        }
     }
     &__text {
         font-size: 14.9208px;
+        @include tablets {
+            font-size: 10px;
+        }
     }
 }
