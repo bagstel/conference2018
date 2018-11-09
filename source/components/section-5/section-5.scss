@@ -1,73 +1,83 @@
 .section-5 {
-  &__content {
-    background: #ED0058;
-  }
-  &__registration {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 58px 0 68px;
-  }
+    &__container {
+        background: #ED0058;
+    }
+    &__content {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px;
+    }
 }
 
 .registration {
-  &__title {
-    font-weight: bold;
-    font-size: 70px;
-    text-align: center;
-    color: #FFFFFF;
-    @include tablets {
-      font-size: 40px;
-    }
-  }
-  &__subtitle {
-    margin-top: 8px;
-    font-size: 36px;
-    color: #FFFFFF;
-    @include tablets {
-      font-size: 24px;
-      text-align: center;
-    }
-  }
-  &__form {
-    display: flex;
-    margin-top: 55px;
-    @include tablets {
-      flex-direction: column;
-      align-items: center;
-    }
-    input,
-    a {
-      height: 64px;
-    }
-    input {
-      width: 423.41px;
-      font-size: 23px;
-      background: none;
-      border: 1px solid #fff;
-      outline: none;
-      @include tablets {
-        margin: 0 auto 40px;
-        width: 280px;
-      }
-      &::placeholder {
+    &__title {
+        font-weight: bold;
+        font-size: 70px;
+        text-align: center;
         color: #FFFFFF;
-        padding-left: 20px;
-        @include tablets {
-          text-align: center;
+        @include laptop {
+            font-size: 40px;
         }
-      }
+        @include tablets {
+            font-size: 35px;
+        }
     }
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 239.67px;
-      font-weight: 600;
-      font-size: 23px;
-      color: #242528;
-      text-decoration: none;
-      background: #FFFFFF;
+    &__subtitle {
+        margin-top: 10px;
+        font-size: 36px;
+        color: #FFFFFF;
+        @include tablets {
+            font-size: 24px;
+            text-align: center;
+        }
     }
-  }
+    &__form {
+        display: flex;
+        margin-top: 40px;
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+        }
+        input,
+        a {
+            height: 64px;
+        }
+        input {
+            width: 423.41px;
+            font-size: 23px;
+            background: none;
+            border: 1px solid #fff;
+            outline: none;
+            padding: 5px 10px;
+            @include tablets {
+                margin: 0 auto 40px;
+                width: 280px;
+            }
+            &::placeholder {
+                color: #FFFFFF;
+                padding-left: 20px;
+                @include tablets {
+                    text-align: center;
+                }
+            }
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 239.67px;
+            font-weight: 600;
+            font-size: 23px;
+            color: #242528;
+            text-decoration: none;
+            background: #FFFFFF;
+            &:hover {
+                background: #000;
+                color: #fff;
+            }
+        }
+    }
 }

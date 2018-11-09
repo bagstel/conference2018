@@ -1,29 +1,30 @@
 .section-3 {
-    background: #EAF1FB;
-    &__content {
-        min-height: 100vh;
+    &__container {
         background: #EAF1FB;
-        padding-bottom: 100px;
+    }
+    &__content {
+        padding: 40px;
+
+        max-width: 1440px;
+        margin: 0 auto;
     }
     &__title {
         font-size: 70px;
         color: #242424;
-        font-weight: 700;
+        font-weight: bold;
         text-align: center;
-        margin-top: 0;
-        padding-top: 57px;
-        margin-bottom: 55px;
         @include laptop {
             font-size: 50px;
         }
     }
 }
+
 .speaker {
     width: 342px;
     text-align: center;
     background: #fff;
-    margin-bottom: 40px;
-    @media screen and (max-width:1300px) {
+    margin-top: 40px;
+    @media screen and (max-width: 1300px) {
         width: 300px;
     }
     @include tablets {
@@ -49,6 +50,7 @@
         color: #969797;
     }
 }
+
 .speakers {
     &__slider {
         position: relative;
@@ -63,7 +65,7 @@
         width: 1140px;
         position: relative;
         background: #EAF1FB;
-        @media screen and (max-width:1300px) {
+        @media screen and (max-width: 1300px) {
             width: 668px;
             height: 970px;
         }
@@ -88,7 +90,10 @@
         width: 55px;
         height: 140px;
         cursor: pointer;
-        @media screen and (max-width:1300px) {
+        &:hover {
+            opacity: .5;
+        }
+        @media screen and (max-width: 1300px) {
             width: 30px;
             height: 80px;
             @include tablets {
@@ -105,13 +110,13 @@
             @include tablets {
                 left: 20%;
             }
-            @media screen and (max-width:660px) {
+            @media screen and (max-width: 660px) {
                 left: 10%;
             }
-            @media screen and (max-width:500px) {
+            @media screen and (max-width: 500px) {
                 left: 20px;
             }
-            @media screen and (max-width:360px) {
+            @media screen and (max-width: 360px) {
                 left: 5px;
             }
         }
@@ -120,13 +125,13 @@
             @include tablets {
                 right: 20%;
             }
-            @media screen and (max-width:660px) {
+            @media screen and (max-width: 660px) {
                 right: 10%;
             }
-            @media screen and (max-width:500px) {
+            @media screen and (max-width: 500px) {
                 right: 20px;
             }
-            @media screen and (max-width:360px) {
+            @media screen and (max-width: 360px) {
                 right: 5px;
             }
         }

@@ -2,12 +2,11 @@ mixin section-8
     section.section-8#partners
         div.container
             div.section-8__content
-                h1.section-8__title Partners
-                ul.section-8__partners
+                div.section-8__title Partners
+                ul.section-8__list
                     - var partners = ['logo1', 'logo2', 'logo3', 'logo4', 'logo5', 'logo6']
                         each item in partners
-                            li.section-8__partner
+                            li.section-8__item
                                 img(src="../images/" + item + ".png")
                 .section-8__text Do you want to become a partner?
-                .section-8__btn
-                    .btn.btn--red Send request
+                .section-8__btn: a(href="#") Send request

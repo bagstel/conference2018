@@ -1,0 +1,9 @@
+mixin social
+    div.social__container
+        div.social__content
+            div.social__title Join to the community who runs the market:
+            ul.social__list
+                - var icons = ['facebook', 'telegram', 'youtube', 'twitter']
+                each item in icons
+                    li.social__item: a(href="#")
+                        img(src="../images/" + item + ".svg")

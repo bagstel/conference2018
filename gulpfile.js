@@ -148,6 +148,7 @@ gulp.task('sprite', callback => {
 gulp.task('copy:images', () => {
     return gulp
         .src(paths.source.images)
+        .pipe(imagemin())
         .pipe(gulp.dest(paths.dest.images))
         .pipe(browserSync.stream());
 });

@@ -1,109 +1,113 @@
 .section-6 {
-  &__content {
-
-  }
-  &__title {
-    margin-top: 90px;
-    font-weight: bold;
-    font-size: 70px;
-    text-align: center;
-    color: #242424;
-  }
-  &__table {
-    max-width: 100%;
-    margin: 43px auto 0;
-    border-top: 1px solid #2C109F;
-    border-right: 1px solid #2C109F;
-    th, td {
-      border-bottom: 1px solid #2C109F;
-      border-left: 1px solid #2C109F;
+    &__container {
+        background: #fff;
     }
-    table, tr, th, td {
-      border-collapse: collapse;
-      border-spacing: 0;
-      margin: 0;
-      padding: 0;
+    &__content {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 40px;
     }
-  }
+    &__title {
+        font-weight: bold;
+        font-size: 70px;
+        text-align: center;
+        color: #242424;
+    }
+    &__table {
+        max-width: 100%;
+        margin: 43px auto 0;
+        border-top: 1px solid #2C109F;
+        border-right: 1px solid #2C109F;
+        th, td {
+            border-bottom: 1px solid #2C109F;
+            border-left: 1px solid #2C109F;
+        }
+        table, tr, th, td {
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin: 0;
+            padding: 0;
+        }
+    }
 }
 
 .program {
-  &__table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin: 0;
-    padding: 0;
-  }
-  &__th {
-    display: flex;
-    padding: 28px;
-    background: #969797;
-    height: 100%;
-    align-items: center;
-    &.active {
-      background: #2C109F;
-      width: 550px;
-      .program__date {
-        display: block;
-      }
+    &__table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin: 0;
+        padding: 0;
     }
-  }
-  &__date {
-    width: 100%;
-    height: 100%;
-    font-size: 36px;
-    color: #fff;
-    display: none;
-  }
-  &__day {
-    &-text {
-      font-weight: 600;
-      font-size: 29px;
-      color: #A2BEEE;
-      text-transform: uppercase;
+    &__th {
+        display: flex;
+        padding: 28px;
+        background: #969797;
+        height: 100%;
+        align-items: center;
+        &.active {
+            background: #2C109F;
+            width: 550px;
+            .program__date {
+                display: block;
+            }
+        }
     }
-    &-digit {
-      font-weight: bold;
-      font-size: 70px;
-      color: #A2BEEE;
+    &__date {
+        width: 100%;
+        height: 100%;
+        font-size: 36px;
+        color: #fff;
+        display: none;
     }
-  }
+    &__day {
+        &-text {
+            font-weight: 600;
+            font-size: 29px;
+            color: #A2BEEE;
+            text-transform: uppercase;
+        }
+        &-digit {
+            font-weight: bold;
+            font-size: 70px;
+            color: #A2BEEE;
+        }
+    }
 
-  &__info {
-    min-height: 98px;
-    padding: 25px 35px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    &-content {
-      display: flex;
-      margin-bottom: 50px;
+    &__info {
+        min-height: 98px;
+        padding: 25px 35px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        &-content {
+            display: flex;
+            margin-bottom: 50px;
+        }
+        &-image {
+            width: 106px;
+            height: 106px;
+            background: url("../images/Group.png") no-repeat center #000;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-wrapper {
+            margin-left: 41px;
+            font-size: 23px;
+            color: #242528;
+        }
+        &-title {
+            font-size: 36px;
+            font-weight: 300;
+        }
+        &-text {
+            line-height: 35px;
+        }
+        &-duration {
+            color: #ED0058;
+            font-size: 23px;
+            font-weight: 300;
+        }
     }
-    &-image {
-      width: 106px;
-      height: 106px;
-      background: url("../images/Group.png") no-repeat center #000;
-      border-radius: 50%;
-      overflow: hidden;
-    }
-    &-wrapper {
-      margin-left: 41px;
-      font-size: 23px;
-      color: #242528;
-    }
-    &-title {
-      font-size: 36px;
-      font-weight: 300;
-    }
-    &-text {
-      line-height: 35px;
-    }
-    &-duration {
-      color: #ED0058;
-      font-size: 23px;
-      font-weight: 300;
-    }
-  }
 }
 
 //.program {

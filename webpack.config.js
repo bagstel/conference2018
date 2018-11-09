@@ -1,6 +1,6 @@
 module.exports = {
 	output: {
-		filename: 'bundle.js',
+		filename: '091120181751.js',
 	},
 	devtool: 'source-map',
 	module: {

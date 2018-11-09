@@ -1,9 +1,18 @@
 .header {
+
+    &__container {
+        background: #000;
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        top: 0;
+    }
     &__content {
+        max-width: 1440px;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: #000;
         height: 70px;
         padding: 0 20px;
     }
@@ -31,7 +40,7 @@
         margin-left: 5px;
         a {
             display: block;
-            color: #A2BEEE;
+            color: #fff;
             font-size: 18px;
             text-decoration: none;
             padding: 8px 15px;
@@ -39,6 +48,7 @@
         &--active,
         a:hover {
             background: #ED0058;
+            color: #fff;
         }
     }
     @include laptop {
@@ -61,7 +71,7 @@
 
 .burger {
     position: relative;
-    right: 45px;
+    right: 25px;
     transition: all 0.3s ease-in-out;
     z-index: 100;
     display: none;

@@ -1,53 +1,61 @@
 .section-1 {
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    color: #fff;
-    background: url("../images/erth.png") no-repeat center;
-    background-size: cover;
-  }
-  &__date {
-    margin-top: 56px;
-    font-size: 29px;
-    text-align: center;
-    color: #A2BEEE;
-  }
-  &__title {
-    margin-top: 45px;
-    font-weight: bold;
-    font-size: 70px;
-    text-align: center;
-    @include tablets {
-      font-size: 40px;
+    &__container {
+        background: url("../images/erth.png") no-repeat center/cover;
     }
-  }
-  &__text {
-    margin-top: 51px;
-    font-size: 44px;
-    line-height: 1.2;
-    text-align: center;
-    @include tablets {
-      font-size: 22px;
+    &__content {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: #fff;
     }
-  }
-  &__button {
-    margin-top: 60px;
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 240px;
-      height: 64px;
-      background: #ED0058;
-      color: inherit;
-      font-size: 23px;
-      text-decoration: none;
+    &__date {
+        font-size: 29px;
+        text-align: center;
+        color: #A2BEEE;
     }
-  }
-  &__counter {
-    margin: 46px 0;
-  }
+    &__title {
+        margin-top: 45px;
+        font-weight: bold;
+        font-size: 70px;
+        text-align: center;
+        @include tablets {
+            font-size: 40px;
+        }
+    }
+    &__text {
+        margin-top: 51px;
+        font-size: 44px;
+        line-height: 1.2;
+        text-align: center;
+        @include tablets {
+            font-size: 22px;
+        }
+    }
+    &__button {
+        margin-top: 60px;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 240px;
+            height: 64px;
+            background: #ED0058;
+            color: #fff;
+            font-size: 23px;
+            text-decoration: none;
+        }
+        &:hover {
+            a {
+                background: #000;
+            }
+        }
+    }
+    &__counter {
+        margin: 46px 0 0;
+    }
 }
