@@ -1,37 +1,39 @@
 mixin section-6
     section.section-6
-        .section-6__title Program
-        .section-6__table
-            table.program__table
-                thead
-                    tr.program__row
-                        - for (var n = 0; n < 4; n++)
-                            - var active = n == 0 || n == 1? ' active' : '';
-                            th
-                                div(class="program__th" + active)
-                                    .program__date December #{n+3}rd
-                                    .program__day
-                                        .program__day-text day
-                                        .program__day-digit= n + 1
-                tbody
-                    tr.program__row.info
-                        - for (var n = 0; n < 2; n++)
-                            td: div.program__info
-                                div.program__info-duration 15 min
-
-                        - for (var n = 0; n < 2; n++)
-                            td: div.program__info
-                    - for (var i = 0; i < 9; i++)
-                        tr.program__row
-                            - for (var n = 0; n < 2; n++)
-                                td
-                                    div.program__info
-                                        div.program__info-content
-                                            div.program__info-image
-                                            div.program__info-wrapper
-                                                .program__info-title Welcome
-                                                .program__info-text Welcome Words <br> Agenda of the Day <br> Sponsors Announcement
+        div.container
+            div..section-6__content
+                .section-6__title Program
+                .section-6__table
+                    table.program__table
+                        thead
+                            tr.program__row
+                                - for (var n = 0; n < 4; n++)
+                                    - var active = n == 0 || n == 1? ' active' : '';
+                                    th
+                                        div(class="program__th" + active)
+                                            .program__date December #{n+3}rd
+                                            .program__day
+                                                .program__day-text day
+                                                .program__day-digit= n + 1
+                        tbody
+                            tr.program__row.info
+                                - for (var n = 0; n < 2; n++)
+                                    td: div.program__info
                                         div.program__info-duration 15 min
 
-                            - for (var n = 0; n < 2; n++)
-                                td: div.program__info
+                                - for (var n = 0; n < 2; n++)
+                                    td: div.program__info
+                            - for (var i = 0; i < 9; i++)
+                                tr.program__row
+                                    - for (var n = 0; n < 2; n++)
+                                        td
+                                            div.program__info
+                                                div.program__info-content
+                                                    div.program__info-image
+                                                    div.program__info-wrapper
+                                                        .program__info-title Welcome
+                                                        .program__info-text Welcome Words <br> Agenda of the Day <br> Sponsors Announcement
+                                                div.program__info-duration 15 min
+
+                                    - for (var n = 0; n < 2; n++)
+                                        td: div.program__info

@@ -1,12 +1,14 @@
 mixin footer
     footer.footer
-        div.social
-            div.social__title Join to the community who runs the market:
-            ul.social__list
-                - var icons = ['facebook', 'telegram', 'youtube', 'twitter']
-                each item in icons
-                    li.social__item
-                        img(src="../images/" + item + ".svg")
+        div.container
+            div.footer__content
+                div.social
+                    div.social__title Join to the community who runs the market:
+                    ul.social__list
+                        - var icons = ['facebook', 'telegram', 'youtube', 'twitter']
+                        each item in icons
+                            li.social__item: a(href="#")
+                                img(src="../images/" + item + ".svg")
 
-        div.copyright
-            div.copyright__innet © Copyright 2018. All Rights Reserved
+                div.copyright
+                    div.copyright__innet © Copyright 2018. All Rights Reserved

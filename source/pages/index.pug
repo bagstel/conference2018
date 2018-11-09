@@ -1,5 +1,6 @@
 extends libs/default
 
+include ../components/header/header
 include ../components/section-1/section-1
 include ../components/section-2/section-2
 include ../components/section-3/section-3
@@ -22,7 +23,8 @@ block links
 block scriptsToHead
 
 block content
-    div.page__wrapper#fullpage
+    div.wrapper#fullpage
+        +header
         +section-1
         +section-2
         +section-3

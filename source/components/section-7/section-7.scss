@@ -1,47 +1,50 @@
 .section-7 {
+  &__content {
     background: url("../images/bgblue.png") no-repeat center/cover;
     padding: 78px 0 130px 0;
-    &__subtitle {
-        font-size: 36px;
-        color: #FFFFFF;
-        text-align: center;
-        @include tablets {
-            font-size: 26px;
-        }
-    }
-    &__title {
-        margin-top: 57px;
-        font-weight: bold;
-        line-height: 85px;
-        font-size: 70px;
-        text-align: center;
-        color: #FFFFFF;
-        @include tablets {
-            font-size: 30px;
-            line-height: 1.4;
-        }
-    }
-    &__arrow {
-        width: 50px;
-        height: 50px;
-        margin: 74px auto 0;
-        @include tablets {
-            margin-top: 30px;
-        }
-    }
-    &__btn {
-        margin-top: 30px;
-        text-align: center;
-    }
-}
-.btn {
+  }
+  &__subtitle {
+    font-size: 36px;
+    color: #FFFFFF;
     text-align: center;
-    font-weight: 600;
-    line-height: normal;
-    font-size: 23px;
-    color: #242528;
-    padding: 15px 55px;
-    background: #fff;
-    display: inline-block;
-    cursor: pointer;
+    @include tablets {
+      font-size: 26px;
+    }
+  }
+  &__title {
+    margin-top: 57px;
+    font-weight: bold;
+    line-height: 85px;
+    font-size: 70px;
+    text-align: center;
+    color: #FFFFFF;
+    @include tablets {
+      font-size: 30px;
+      line-height: 1.4;
+    }
+  }
+  &__arrow {
+    width: 50px;
+    height: 50px;
+    margin: 74px auto 0;
+    @include tablets {
+      margin-top: 30px;
+    }
+  }
+  &__btn {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+
+.btn {
+  text-align: center;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 23px;
+  color: #242528;
+  padding: 15px 55px;
+  background: #fff;
+  display: inline-block;
+  cursor: pointer;
 }

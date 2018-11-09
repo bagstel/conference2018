@@ -1,15 +1,16 @@
 mixin header
     header.header
-        div.header__logo: a(href="/")
-        nav.navigation
-            ul.navigation__list
-                li.navigation__item: a(href="#section-1") Home
-                li.navigation__item: a(href="#speakers") Speakers
-                li.navigation__item: a(href="#program") Program
-                li.navigation__item: a(href="#sponsorship") Sponsorship
-                li.navigation__item: a(href="#partners") Partners
-                li.navigation__item: a(href="#access").access_button Get access
-        .header__burger
-            .burger#burger
-                - for (var x = 0; x < 3; x++)
-                    span.line
+        div.container
+            div.header__content
+                div.header__logo: a(href="/")
+                nav.header__navigation
+                    ul.navigation__list
+                        li.navigation__item: a(href="#section-1") Home
+                        li.navigation__item: a(href="#speakers") Speakers
+                        li.navigation__item: a(href="#program") Program
+                        li.navigation__item: a(href="#sponsorship") Sponsorship
+                        li.navigation__item: a(href="#partners") Partners
+                        li.navigation__item.navigation__item--active: a(href="#access") Get access
+                div.burger#burger
+                    - for (var x = 0; x < 3; x++)
+                        span.line

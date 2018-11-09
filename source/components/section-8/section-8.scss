@@ -1,53 +1,56 @@
 .section-8 {
+  &__content {
     background: #E5E5E5;
     padding-top: 77px;
     padding-bottom: 142px;
-    &__title {
-        font-weight: bold;
-        font-size: 70px;
-        text-align: center;
-        color: #242424;
-        margin-bottom: 105px;
-        @include tablets {
-            font-size: 40px;
-        }
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+    color: #242424;
+    margin-bottom: 105px;
+    @include tablets {
+      font-size: 40px;
     }
-    &__partners {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        max-width: 1000px;
-        margin: 0 auto 40px;
+  }
+  &__partners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+  }
+  &__partner {
+    height: 140px;
+    width: 140px;
+    margin: 0 70px 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablets {
+      width: 200px;
+      height: 200px;
+      margin: 0 50px 55px;
     }
-    &__partner {
-        height: 140px;
-        width: 140px;
-        margin: 0 70px 55px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @include tablets {
-            width: 200px;
-            height: 200px;
-            margin: 0 50px 55px;
-        }
-        @media screen and (max-width:599px) {
-            height: auto;
-            width: 80%;
-        }
+    @media screen and (max-width: 599px) {
+      height: auto;
+      width: 80%;
     }
-    &__text {
-        font-size: 23px;
-        color: #242424;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    &__btn {
-        text-align: center;
-    }
+  }
+  &__text {
+    font-size: 23px;
+    color: #242424;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__btn {
+    text-align: center;
+  }
 }
+
 .btn--red {
-    color: #fff;
-    background: #ED0058;
+  color: #fff;
+  background: #ED0058;
 }

@@ -1,66 +1,66 @@
 .section-2 {
-    &__content {
-        min-height: 400px;
-        background: url("../images/Img-record.png") no-repeat center;
-        background-size: cover;
-        display: flex;
-        @include tablets {
-            justify-content: center;
-            align-items: center;
-        }
+  &__content {
+    min-height: 400px;
+    background: url("../images/Img-record.png") no-repeat center;
+    background-size: cover;
+    display: flex;
+    @include tablets {
+      justify-content: center;
+      align-items: center;
     }
-    &__figure {
-        width: 634px;
-        margin: 50px 0 0 42%;
-        position: relative;
-        @include laptop {
-            width: 500px;
-            margin-left: 30%;
-        }
-        @include tablets {
-            margin-left: 0;
-            width: 300px;
-        }
+  }
+  &__figure {
+    width: 634px;
+    margin: 50px 0 0 42%;
+    position: relative;
+    @include laptop {
+      width: 500px;
+      margin-left: 30%;
     }
-    &__figcaption {
-        position: absolute;
-        top: -22px;
-        left: 7px;
-        width: 210px;
-        line-height: 150%;
-        text-align: center;
-        @include laptop {
-            left: -18px;
-        }
-        @include tablets {
-            left: 15%;
-            top: -55px;
-        }
-        &:before,
-        &:after {
-            content: '';
-            position: absolute;
-            top: 7px;
-            width: 44px;
-            height: 65px;
-        }
-        &:before {
-            left: -40px;
-            background: url("../images/Vector-left.png") no-repeat center;
-            background-size: cover;
-        }
-        &:after {
-            right: -35px;
-            background: url("../images/Vector-right.png") no-repeat center;
-            background-size: cover;
-        }
-        @media screen and (min-width: 1441px) {
-            width: 32.98%;
-            &:before,
-            &:after {
-                //width: 88px;
-                //height: 130px;
-            }
-        }
+    @include tablets {
+      margin-left: 0;
+      width: 300px;
     }
+  }
+  &__figcaption {
+    position: absolute;
+    top: -22px;
+    left: 7px;
+    width: 210px;
+    line-height: 150%;
+    text-align: center;
+    @include laptop {
+      left: -18px;
+    }
+    @include tablets {
+      left: 15%;
+      top: -55px;
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 7px;
+      width: 44px;
+      height: 65px;
+    }
+    &:before {
+      left: -40px;
+      background: url("../images/Vector-left.png") no-repeat center;
+      background-size: cover;
+    }
+    &:after {
+      right: -35px;
+      background: url("../images/Vector-right.png") no-repeat center;
+      background-size: cover;
+    }
+    @media screen and (min-width: 1441px) {
+      width: 32.98%;
+      &:before,
+      &:after {
+        //width: 88px;
+        //height: 130px;
+      }
+    }
+  }
 }

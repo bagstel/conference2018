@@ -11,6 +11,9 @@
         align-items: center;
         list-style: none;
         padding: 0 24px;
+        @include tablets {
+            padding: 0 18px;
+        }
         &:not(:first-child) {
             border-left: 2px solid #2D67EE;
         }

@@ -8,28 +8,41 @@ mixin speaker(data)
 
 mixin section-3
     section.section-3#speakers
-        div.section-3__content
-            h1.section-3__title Speaker
-            .section-3__slider
-                div.speakers__slider#slider-speakers
-                    .speakers__wrap.container
-                        .speakers__list
-                            .speaker__col
-                                - var speakers1 = [{photo:"speaker1", name:"Takeshi Shika", descr:"The University of Blockchain and ICO (UBAI). UBAI Academic Advisor"}, {photo:"speaker4", name:"Makarov Dmitry", descr:"Platinum Listing LTD. Head of the Legal \"Department in Platinum Listing Holding\""}]
-                                each item in speakers1
-                                    +speaker(item)
-                            .speaker__col
-                                - var speakers1 = [{photo:"speaker2", name:"Jack Huang", descr:"The University of Blockchain and \"ICO (UBAI). UBAI Academic\""}, {photo:"speaker5", name:"Anton Dzyatkovskii", descr:"Platinum Listing LTD MicroMoney Empire. Co Founder, Successful Entrepreneur"}]
-                                each item in speakers1
-                                    +speaker(item)
-                            .speaker__col
-                                - var speakers1 = [{photo:"speaker3", name:"Pacapol Anurit", descr:"The University of Blockchain and \"ICO (UBAI). UBAI Academic Advisor\""}, {photo:"speaker6", name:"Dan Khomenko", descr:"Platinum.Fund. The University of \"Blockchain and ICO (UBAI). Co Founder\""}]
-                                each item in speakers1
-                                    +speaker(item)
-                    .speakers__contrls
-                        .speakers__contrl.speakers__contrl--prev
-                            svg(width="55" height="140" viewBox="0 0 55 140" fill="none" xmlns="http://www.w3.org/2000/svg")
-                                path(d="M53.2821 138.841L1.36549 69.9996L53.2821 1.1586" stroke="#5E5E5F" stroke-width="2" stroke-miterlimit="10")
-                        .speakers__contrl.speakers__contrl--next
-                            svg(width="55" height="140" viewBox="0 0 55 140" fill="none" xmlns="http://www.w3.org/2000/svg")
-                                path(d="M1.72046 1.15955L53.6372 70.0007L1.72046 138.842" stroke="#5E5E5F" stroke-width="2" stroke-miterlimit="10")
+        div.container
+            div.section-3__content
+                h1.section-3__title Speaker
+                .section-3__slider
+                    div.speakers__slider#slider-speakers
+                        .speakers__wrap.container
+                            .speakers__list
+                                .speaker__col
+                                    - var speakers1 = [{photo:"speaker1", name:"Takeshi Shika", descr:"The University of Blockchain and ICO (UBAI). UBAI Academic Advisor"}, {photo:"speaker4", name:"Makarov Dmitry", descr:"Platinum Listing LTD. Head of the Legal \"Department in Platinum Listing Holding\""}]
+                                    each item in speakers1
+                                        +speaker(item)
+                                .speaker__col
+                                    - var speakers1 = [{photo:"speaker2", name:"Jack Huang", descr:"The University of Blockchain and \"ICO (UBAI). UBAI Academic\""}, {photo:"speaker5", name:"Anton Dzyatkovskii", descr:"Platinum Listing LTD MicroMoney Empire. Co Founder, Successful Entrepreneur"}]
+                                    each item in speakers1
+                                        +speaker(item)
+                                .speaker__col
+                                    - var speakers1 = [{photo:"speaker3", name:"Pacapol Anurit", descr:"The University of Blockchain and \"ICO (UBAI). UBAI Academic Advisor\""}, {photo:"speaker6", name:"Dan Khomenko", descr:"Platinum.Fund. The University of \"Blockchain and ICO (UBAI). Co Founder\""}]
+                                    each item in speakers1
+                                        +speaker(item)
+                                .speaker__col
+                                    - var speakers1 = [{photo:"speaker1", name:"Takeshi Shika", descr:"The University of Blockchain and ICO (UBAI). UBAI Academic Advisor"}, {photo:"speaker4", name:"Makarov Dmitry", descr:"Platinum Listing LTD. Head of the Legal \"Department in Platinum Listing Holding\""}]
+                                    each item in speakers1
+                                        +speaker(item)
+                                .speaker__col
+                                    - var speakers1 = [{photo:"speaker2", name:"Jack Huang", descr:"The University of Blockchain and \"ICO (UBAI). UBAI Academic\""}, {photo:"speaker5", name:"Anton Dzyatkovskii", descr:"Platinum Listing LTD MicroMoney Empire. Co Founder, Successful Entrepreneur"}]
+                                    each item in speakers1
+                                        +speaker(item)
+                                .speaker__col
+                                    - var speakers1 = [{photo:"speaker3", name:"Pacapol Anurit", descr:"The University of Blockchain and \"ICO (UBAI). UBAI Academic Advisor\""}, {photo:"speaker6", name:"Dan Khomenko", descr:"Platinum.Fund. The University of \"Blockchain and ICO (UBAI). Co Founder\""}]
+                                    each item in speakers1
+                                        +speaker(item)
+                        div.speakers__contrls
+                            .speakers__contrl.speakers__contrl--prev
+                                svg(width="55" height="140" viewBox="0 0 55 140" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(d="M53.2821 138.841L1.36549 69.9996L53.2821 1.1586" stroke="#5E5E5F" stroke-width="2" stroke-miterlimit="10")
+                            .speakers__contrl.speakers__contrl--next
+                                svg(width="55" height="140" viewBox="0 0 55 140" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(d="M1.72046 1.15955L53.6372 70.0007L1.72046 138.842" stroke="#5E5E5F" stroke-width="2" stroke-miterlimit="10")
