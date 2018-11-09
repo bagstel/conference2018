@@ -1,5 +1,4 @@
 .section-8 {
-    min-height: 100vh;
     background: #E5E5E5;
     padding-top: 77px;
     padding-bottom: 142px;
@@ -34,7 +33,6 @@
             margin: 0 50px 55px;
         }
         @media screen and (max-width:599px) {
-            //margin: 0 20px 20px;
             height: auto;
             width: 80%;
         }

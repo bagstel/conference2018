@@ -6,7 +6,6 @@
     background: url("../images/Dana.png") no-repeat center;
     background-size: cover;
     @include tablets {
-        //background-size: 850px 562px;
         background: #cfcfcf;
         height: 68%;
         justify-content: center;
@@ -18,7 +17,11 @@
         font-weight: bold;
         color: #242424;
         text-align: center;
+        @include laptop {
+            width: 90%;
+        }
         @include tablets {
+
             font-size: 33px;
             margin-top: 20px;
             line-height: 46px;

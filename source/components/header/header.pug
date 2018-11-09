@@ -3,12 +3,12 @@ mixin header
         div.header__logo: a(href="/")
         nav.navigation
             ul.navigation__list
-                li.navigation__item: a(href="#") Home
-                li.navigation__item: a(href="#") Speakers
-                li.navigation__item: a(href="#") Program
-                li.navigation__item: a(href="#") Sponsorship
-                li.navigation__item: a(href="#") Partners
-                li.navigation__item: a(href="#").access_button Get access
+                li.navigation__item: a(href="#section-1") Home
+                li.navigation__item: a(href="#speakers") Speakers
+                li.navigation__item: a(href="#program") Program
+                li.navigation__item: a(href="#sponsorship") Sponsorship
+                li.navigation__item: a(href="#partners") Partners
+                li.navigation__item: a(href="#access").access_button Get access
         .header__burger
             .burger#burger
                 - for (var x = 0; x < 3; x++)
