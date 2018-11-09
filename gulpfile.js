@@ -122,7 +122,7 @@ gulp.task('js', () => {
         .pipe(plumber({
             errorHandler: notify.onError(err => {
                 return {
-                    title: 'Style',
+                    title: 'js',
                     message: err.message
                 }
             })
