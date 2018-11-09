@@ -1,15 +1,69 @@
 mixin section-6
     section.section-6#program
-        table
-            thead
-                tr
-                    th day 1
-                    th day 2
-                    th day 3
-                    th day 4
-            tbody
-                tr
-                    td hello 1
-                    td hello 2
-                    td hello 3
-                    td hello 4
+        div.program__title Program
+        ul.program__list
+            - for (var n = 0; n < 4; n++)
+                - var active = n == 0 ? ' program__item--active' : '';
+
+                li(class="program__item" + active)
+
+                    ul.program__sublist
+
+
+                        li.program__subitem
+                            .program__date December 3rd
+                            .program__day
+                                .program__day-text DAY
+                                .program__day-digit 1
+
+
+                        li.program__subitem
+                            div.program__info
+                                div.program__info-content
+                                    div.program__info-image.program__info-image--black
+                                        img(src="./images/Group.png", alt="")
+                                    div.program__info-wrapper
+                                        .program__info-title Welcome
+                                        ul.program__info-text
+                                            li Welcome Words
+                                            li Agenda of the Day
+                                            li Sponsors Announcement
+                                div.program__info-duration 45 min
+
+
+                        li.program__subitem
+                            div.program__info
+                                div.program__info-content
+                                    div.program__info-image
+                                        img(src="./images/avatar.png", alt="")
+                                    div.program__info-wrapper
+                                        .program__info-title Welcome
+                                        ul.program__info-text
+                                            li Welcome Words
+                                            li Agenda of the Day
+                                            li Sponsors Announcement
+                                        div.program__info-anonymous Anonymous
+                                div.program__info-duration 20 min
+
+                        li.program__subitem
+                            div.program__info
+                                div.program__info-content
+                                    div.program__info-image
+                                        img(src="./images/avatar.png", alt="")
+                                    div.program__info-wrapper
+                                        .program__info-title 2nd Speech
+                                        .program__info-text ICO Campaign — from zero to business
+                                div.program__info-duration 20 min
+
+
+                        li.program__subitem
+                            div.program__info
+                                div.program__info-content.program__info-content--3images
+                                    ul.program__info-images
+                                        li: img(src="./images/avatar.png", alt="")
+                                        li: img(src="./images/avatar.png", alt="")
+                                        li: img(src="./images/avatar.png", alt="")
+                                    div.program__info-wrapper
+                                        .program__info-title 2nd Speech
+                                        .program__info-text ICO Campaign — from zero to business
+                                div.program__info-duration 20 min
