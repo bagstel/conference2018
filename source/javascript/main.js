@@ -159,7 +159,6 @@ let toggle = function (e) {
     const items = document.querySelectorAll(`.column-${column}`);
     const list = document.querySelectorAll('.column');
 
-    //console.log(list[0].children[0].dataset.column === column);
     for (let i = 0; i < list.length; i++) {
 
         if (list[i].children[0].dataset.column === column) {

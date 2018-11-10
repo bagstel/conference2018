@@ -11,6 +11,26 @@
             padding: 40px 20px;
         }
     }
+    &__title {
+        margin-bottom: 20px;
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        color: #242424;
+    }
+    table, tr, th, td {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    table {
+        width: 100%;
+        border-top: 1px solid #2C109F;
+        border-right: 1px solid #2C109F;
+    }
+    th, td {
+        border-bottom: 1px solid #2C109F;
+        border-left: 1px solid #2C109F;
+    }
 }
 
 $timer: 3s;
@@ -50,33 +70,30 @@ $timer: 3s;
     .table-head__date {
         display: block;
     }
-    .table-head__day {
-        width: auto;
-        //float: right;
+    .table-head {
+        &__day {
+            width: auto;
+            @include tablets {
+                transform: rotate(0);
+                flex-direction: column;
+                margin: 10px 0;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: normal;
+            }
+        }
+        &__digit {
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 50px;
+            @include tablets {
+                padding: 0;
+            }
+        }
     }
     .table-body__wrapper {
         position: static;
         opacity: 1;
-    }
-}
-
-.section-6 {
-    &__content {
-    }
-    &__title {
-        margin-bottom: 20px;
-        font-size: 50px;
-        font-weight: bold;
-        text-align: center;
-        color: #242424;
-    }
-    table, tr, th, td {
-        border: 1px solid #2C109F;
-        border-collapse: collapse;
-        border-spacing: 0;
-    }
-    table {
-        width: 100%;
     }
 }
 
@@ -89,16 +106,14 @@ $timer: 3s;
         color: #fff;
         &__wrapper {
             @include clearfix;
-            padding: 10px 0;
+            padding: 0 10px;
         }
         &__cell {
-            //transition: width 1s linear;
             width: 60px;
             background: #969797;
             cursor: pointer;
             &.active {
                 width: 100%;
-                //width: calc(100% - 180px);
             }
 
             @media screen and (max-width: 667px) {
@@ -113,19 +128,16 @@ $timer: 3s;
             align-items: center;
         }
         &__date {
-            //float: left;
             display: none;
             width: 100%;
-            //width: calc(100% - 57px);
-            //margin-top: 25px;
         }
         &__day {
-            //float: none;
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-
+            justify-content: center;
+            align-content: center;
             @include tablets {
                 transform: rotate(-90deg);
                 flex-direction: row;
