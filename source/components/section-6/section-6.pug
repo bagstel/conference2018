@@ -1,39 +1,79 @@
+mixin table-header(data)
+    - var active = data == 1 ? ' active' : '';
+    th(class="column column-" + data + active).table-head__cell
+        div(data-column= data).table-head__wrapper.trigger
+            div.table-head__date December #{data + 2} rd
+            div.table-head__day
+                div.table-head__text DAY
+                div.table-head__digit= data
+
+mixin block-1 (data)
+    - var active = data == 1 ? ' active' : '';
+    td(class="column column-" + data + active).table-body__cell
+        div(data-column= data).table-body__wrapper
+            div.table-body__container
+                div.table-body__image
+                    img(src="./images/avatar-black.png", alt="")
+                div.table-body__content
+                    h4 Welcome
+                    p Welcome Words
+                    p Agenda of the Day
+                    p Sponsors Announcement
+            div.table-body__footer 45 min
+
+mixin block-2 (data)
+    - var active = data == 1 ? ' active' : '';
+    td(class="column column-" + data + active).table-body__cell
+        div(data-column= data).table-body__wrapper
+            div.table-body__container
+                div.table-body__image
+                    img(src="./images/avatar-gray.png", alt="")
+                div.table-body__content
+                    h4 Welcome
+                    p Welcome Words
+                    p Agenda of the Day
+                    div.table-body__anonymous Anonymous
+
+            div.table-body__footer 45 min
+
+
+mixin block-3 (data)
+    - var active = data == 1 ? ' active' : '';
+    td(class="column column-" + data + active).table-body__cell
+        div(data-column= data).table-body__wrapper
+            div.table-body__container
+                div.table-body__image--group
+                    div.table-body__image
+                        img(src="./images/avatar-gray.png", alt="")
+                    div.table-body__image
+                        img(src="./images/avatar-gray.png", alt="")
+                    div.table-body__image
+                        img(src="./images/avatar-gray.png", alt="")
+                div.table-body__content
+                    h4 Welcome
+                    p Welcome Words
+                    p Agenda of the Day
+                    div.table-body__anonymous Anonymous
+
+            div.table-body__footer 45 min
+
+
 mixin section-6
-    section.section-6
+    section.section-6#program
         div.section-6__container
             div.section-6__content
-                .section-6__title Program
-                .section-6__table
-                    table.program__table
-                        thead
-                            tr.program__row
-                                - for (var n = 0; n < 4; n++)
-                                    - var active = n == 0 || n == 1? ' active' : '';
-                                    th
-                                        div(class="program__th" + active)
-                                            .program__date December #{n+3}rd
-                                            .program__day
-                                                .program__day-text day
-                                                .program__day-digit= n + 1
-                        tbody
-                            tr.program__row.info
-                                - for (var n = 0; n < 2; n++)
-                                    td: div.program__info
-                                        div.program__info-duration 15 min
+                h3.section-6__title Program
 
-                                - for (var n = 0; n < 2; n++)
-                                    td: div.program__info
-                            - for (var i = 0; i < 9; i++)
-                                tr.program__row
-                                    - for (var n = 0; n < 2; n++)
-                                        td
-                                            div.program__info
-                                                div.program__info-content
-                                                    div.program__info-image
-                                                    div.program__info-wrapper
-                                                        .program__info-title Welcome
-                                                        .program__info-text Welcome Words <br> Agenda of the Day <br> Sponsors Announcement
-                                                div.program__info-duration 15 min
-
-                                    - for (var n = 0; n < 2; n++)
-                                        td: div.program__info
+                table
+                    tr.table-head
+                        - for (var n = 1; n <= 4; n++)
+                            +table-header(n)
+                    tr.table-body
+                        - for (var i = 1; i <= 4; i++)
+                            +block-1(i)
+                    tr.table-body
+                        - for (var i = 1; i <= 4; i++)
+                            +block-2(i)
+                    tr.table-body
+                        - for (var i = 1; i <= 4; i++)
+                            +block-3(i)

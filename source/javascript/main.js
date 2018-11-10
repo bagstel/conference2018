@@ -67,7 +67,6 @@ for (let n = 0; n < links.length; n++) {
         requestAnimationFrame(step);
 
         function step(time) {
-
             if (start === null) {
                 start = time;
             }
@@ -89,22 +88,49 @@ for (let n = 0; n < links.length; n++) {
 
 
 //program
-const program = document.querySelector('.program__list');
-const items = program.querySelectorAll('.program__item');
+// const program = document.querySelector('.program__list');
+// const items = program.querySelectorAll('.program__item');
+//
+// let toggle = function (e) {
+//     let target = e.target;
+//     let trigger = target.closest('.program__trigger');
+//     let active = target.closest('.program__item');
+//     if (!trigger) return;
+//     // if (active.classList.contains('program__item--active')) {
+//     //     active.classList.remove('program__item--active');
+//     // } else {
+//         items.forEach(item => {
+//             item.classList.remove('program__item--active');
+//         });
+//         active.classList.add('program__item--active');
+//     // }
+// };
+//
+// program.addEventListener('click', toggle);
+
+
+const program = document.querySelectorAll('.trigger');
 
 let toggle = function (e) {
-    let target = e.target;
-    let trigger = target.closest('.program__trigger');
-    let active = target.closest('.program__item');
-    if (!trigger) return;
-    if (active.classList.contains('program__item--active')) {
-        active.classList.remove('program__item--active');
-    } else {
-        items.forEach(item => {
-            item.classList.remove('program__item--active');
-        });
-        active.classList.add('program__item--active');
+
+    let target = e.target.closest('.trigger');
+    let column = target.dataset.column;
+
+    const items = document.querySelectorAll(`.column-${column}`);
+    const list = document.querySelectorAll('.column');
+
+    console.log(list[0].children[0].dataset.column === column);
+    for (let i = 0; i < list.length; i++) {
+
+        if (list[i].children[0].dataset.column === column) {
+            list[i].classList.add('active');
+        }
+        else {
+            list[i].classList.remove('active');
+        }
     }
 };
 
-program.addEventListener('click', toggle);
+for (let i = 0; i < program.length; i++) {
+    program[i].addEventListener('click', toggle);
+}

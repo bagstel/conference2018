@@ -14,21 +14,23 @@
         color: #fff;
     }
     &__date {
+        margin-bottom: 45px;
         font-size: 29px;
         text-align: center;
         color: #A2BEEE;
     }
     &__title {
-        margin-top: 45px;
+        margin-bottom: 45px;
         font-weight: bold;
         font-size: 70px;
         text-align: center;
         @include tablets {
             font-size: 40px;
+
         }
     }
     &__text {
-        margin-top: 51px;
+        margin-bottom: 51px;
         font-size: 44px;
         line-height: 1.2;
         text-align: center;
@@ -37,7 +39,7 @@
         }
     }
     &__button {
-        margin-top: 60px;
+        margin-bottom: 60px;
         a {
             display: flex;
             justify-content: center;
@@ -56,6 +58,5 @@
         }
     }
     &__counter {
-        margin: 46px 0 0;
     }
 }

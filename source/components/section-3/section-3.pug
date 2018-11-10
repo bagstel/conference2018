@@ -3,8 +3,8 @@ mixin speaker(data)
         .speaker__photo
             img(src="../images/" + data.photo + ".png")
         .speaker__info
-            .speaker__name= data.name
-            .speaker__descr= data.descr
+            h3.speaker__name= data.name
+            p.speaker__descr= data.descr
 
 mixin section-3
     section.section-3#speakers
@@ -14,8 +14,8 @@ mixin section-3
                 div.section-3__slider
                     div.speakers__slider#slider-speakers
                         .speakers__wrap.container
-                            .speakers__list
-                                .speaker__col
+                            ul.speakers__list
+                                li.speaker__col
                                     - var speakers1 = [{photo:"speaker1", name:"Takeshi Shika", descr:"The University of Blockchain and ICO (UBAI). UBAI Academic Advisor"}, {photo:"speaker4", name:"Makarov Dmitry", descr:"Platinum Listing LTD. Head of the Legal \"Department in Platinum Listing Holding\""}]
                                     each item in speakers1
                                         +speaker(item)

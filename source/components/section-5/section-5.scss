@@ -22,7 +22,10 @@
             font-size: 40px;
         }
         @include tablets {
-            font-size: 35px;
+            font-size: 33px;
+        }
+        @include phones {
+            font-size: 18px;
         }
     }
     &__subtitle {
@@ -33,6 +36,9 @@
             font-size: 24px;
             text-align: center;
         }
+        @include phones {
+            font-size: 16px;
+        }
     }
     &__form {
         display: flex;
@@ -42,7 +48,7 @@
             align-items: center;
         }
         input,
-        a {
+        button {
             height: 64px;
         }
         input {
@@ -50,30 +56,40 @@
             font-size: 23px;
             background: none;
             border: 1px solid #fff;
+            border-right: none;
             outline: none;
-            padding: 5px 10px;
+            color: #fff;
+            padding-left: 20px;
+
             @include tablets {
+                border: 1px solid #fff;
+                text-align: center;
                 margin: 0 auto 40px;
+                padding: 0;
                 width: 280px;
             }
+
             &::placeholder {
-                color: #FFFFFF;
-                padding-left: 20px;
+                color: #fff;
                 @include tablets {
                     text-align: center;
+
                 }
             }
         }
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 239.67px;
+        input:focus::-webkit-input-placeholder { color:transparent; }
+        input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+        input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+        input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+        button {
+            width: 240px;
             font-weight: 600;
             font-size: 23px;
             color: #242528;
-            text-decoration: none;
-            background: #FFFFFF;
+            background: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
             &:hover {
                 background: #000;
                 color: #fff;

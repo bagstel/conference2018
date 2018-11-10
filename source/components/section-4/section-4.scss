@@ -1,107 +1,104 @@
 .section-4 {
     &__container {
-        background: url("../images/Dana.png") no-repeat center/cover;
+        background: url("../images/img-noise-1200x768.png") no-repeat center/cover;
+        @include tablets {
+            background: #cfcfcf;
+            justify-content: center;
+        }
     }
     &__content {
         max-width: 1440px;
         margin: 0 auto;
         padding: 40px;
-        height: 800px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        @include tablets {
-            height: 400px;
-            background: #cfcfcf;
-            justify-content: center;
-        }
     }
     &__title {
         font-size: 70px;
         line-height: 80px;
         font-weight: bold;
         color: #242424;
+        margin-bottom: 40px;
         text-align: center;
-        @include laptop {
-            width: 90%;
-            font-size: 50px;
-            line-height: 70px;
-        }
         @include tablets {
-            font-size: 33px;
+            font-size: 42px;
             line-height: 46px;
+        }
+        @include phones {
+            font-size: 30px;
+            line-height: 32px;
+            margin-bottom: 20px;
         }
     }
     &__subtitle {
         display: flex;
-        margin-top: 13px;
-        @include tablets {
-            margin: 0;
-            align-items: center;
-            flex-direction: column;
-        }
-    }
-}
-
-.subtitle {
-    &__text {
+        align-items: center;
         font-size: 36px;
         color: #242528;
+        margin-bottom: 40px;
         @include laptop {
-            font-size: 26px;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
         }
-        @include tablets {
-            font-size: 22px;
-            margin-top: 30px;
+        &-text {
+            @include laptop {
+                margin-bottom: 40px;
+            }
+            @include tablets {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+            @include phones {
+
+            }
+        }
+        &-list {
+            display: flex;
+            margin-left: 35px;
+            @include laptop {
+                margin-bottom: 20px;
+            }
+            @include tablets {
+                margin: 0;
+            }
+        }
+        &-item {
+            list-style: none;
+            margin-left: 15px;
+            &:first-child {
+                margin: 0;
+            }
+            .icon {
+                &-laptop {
+                    display: block;
+                    width: 85.29px;
+                    height: 41px;
+                    background: url("../images/laptop.png") no-repeat center;
+                    background-size: cover;
+                }
+                &-tablet {
+                    display: block;
+                    width: 58.6px;
+                    height: 41px;
+                    background: url("../images/tablet.png") no-repeat center;
+                    background-size: cover;
+                }
+                &-smartphone {
+                    display: block;
+                    margin-left: 10px;
+                    width: 23.96px;
+                    height: 41px;
+                    background: url("../images/smartphone.png") no-repeat center;
+                    background-size: cover;
+                }
+            }
         }
     }
-    &__list {
-        display: flex;
-        margin: 0 0 0 35px;
-        padding: 0;
-        @include tablets {
-            margin: 0;
-            margin-top: 30px;
-        }
-    }
-    &__item {
-        list-style: none;
-        margin-left: 15px;
-        .icon {
-            &-laptop {
-                display: block;
-                width: 85.29px;
-                height: 41px;
-                background: url("../images/laptop.png") no-repeat center;
-                background-size: cover;
-                @include laptop {
-                    width: 60px;
-                    height: 35px;
-                }
-            }
-            &-tablet {
-                display: block;
-                width: 58.6px;
-                height: 41px;
-                background: url("../images/tablet.png") no-repeat center;
-                background-size: cover;
-                @include laptop {
-                    width: 50px;
-                    height: 35px;
-                }
-            }
-            &-smartphone {
-                display: block;
-                margin-left: 10px;
-                width: 23.96px;
-                height: 41px;
-                background: url("../images/smartphone.png") no-repeat center;
-                background-size: cover;
-                @include laptop {
-                    width: 20px;
-                    height: 35px;
-                }
-            }
-        }
+    &__image {
+        background: url("../images/section-4.png") no-repeat center;
+        background-size: 100% auto;
+        width: 80%;
     }
 }

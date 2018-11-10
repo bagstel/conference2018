@@ -34,11 +34,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
         @include tablets {
             width: 200px;
             height: 200px;
             margin: 0 50px 55px;
         }
+
         @media screen and (max-width: 599px) {
             height: auto;
             width: 80%;
@@ -47,6 +49,10 @@
     &__text {
         font-size: 23px;
         color: #242424;
+
+        @include phones {
+            font-size: 16px;
+        }
     }
     &__btn {
         margin-top: 60px;
