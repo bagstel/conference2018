@@ -86,6 +86,7 @@ $timer: 3s;
             padding: 10px 15px 5px;
         }
         &__cell {
+            //transition: width 1s linear;
             width: 60px;
             background: #969797;
             cursor: pointer;

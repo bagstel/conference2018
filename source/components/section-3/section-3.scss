@@ -63,16 +63,20 @@
         align-items: center;
         margin: 0 auto;
         width: 1140px;
+        min-height: 1100px;
         position: relative;
         background: #EAF1FB;
         @media screen and (max-width: 1300px) {
             width: 668px;
+            min-height: 1040px;
         }
         @include tablets {
             width: 300px;
+            min-height: 970px;
         }
     }
     &__list {
+        position: absolute;
         top: 0;
         left: 0;
         transition: .5s all linear;

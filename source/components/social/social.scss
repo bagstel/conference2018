@@ -30,6 +30,7 @@
         align-items: center;
         background: #FDF4FD;
         border-radius: 4px;
+        transition: all .5s linear;
         &:not(:first-child) {
             margin-left: 25px;
         }

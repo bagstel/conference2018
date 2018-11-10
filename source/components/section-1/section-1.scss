@@ -1,6 +1,7 @@
 .section-1 {
     &__container {
         background: url("../images/erth.png") no-repeat center/cover;
+        background-attachment: fixed;
     }
     &__content {
         max-width: 1440px;
@@ -50,6 +51,7 @@
             color: #fff;
             font-size: 23px;
             text-decoration: none;
+            transition: all .5s linear;
         }
         &:hover {
             a {

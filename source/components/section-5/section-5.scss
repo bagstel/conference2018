@@ -90,6 +90,7 @@
             border: none;
             outline: none;
             cursor: pointer;
+            transition: all .5s linear;
             &:hover {
                 background: #000;
                 color: #fff;

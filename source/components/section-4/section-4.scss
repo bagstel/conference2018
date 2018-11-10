@@ -1,6 +1,6 @@
 .section-4 {
     &__container {
-        background: url("../images/img-noise-1200x768.png") no-repeat center/cover;
+        background: #cfcfcf;
         @include tablets {
             background: #cfcfcf;
             justify-content: center;

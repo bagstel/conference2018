@@ -1,9 +1,24 @@
-mixin counter
+mixin counter(idClock, idMessage)
     .counter
-        ul.counter__list
-            - var digits = [26, 17, 55, 20];
-            - var text = ['DAYS', 'HOURS', 'MINUTES', 'SECONDS'];
-            each digit, i in digits
-                li.counter__item
-                    div.counter__digit= digit
-                    div.counter__text= text[i]
+        ul.counter__list(id= idClock)
+            li.counter__item
+                span.days.counter__digit
+                div.smalltext.counter__text Days
+            li.counter__item
+                span.hours.counter__digit
+                div.smalltext.counter__text Hours
+            li.counter__item
+                span.minutes.counter__digit
+                div.smalltext.counter__text Minutes
+            li.counter__item
+                span.seconds.counter__digit
+                div.smalltext.counter__text Seconds
+
+        //ul.counter__list#clockdiv
+        //    - var digits = [26, 17, 55, 20];
+        //    - var text = ['DAYS', 'HOURS', 'MINUTES', 'SECONDS'];
+        //    each digit, i in digits
+        //        li.counter__item
+        //            div.counter__digit= digit
+        //            div.counter__text= text[i]
+    div(id= idMessage) Time is up!
