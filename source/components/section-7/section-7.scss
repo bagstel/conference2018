@@ -37,24 +37,22 @@
             margin-top: 30px;
         }
     }
-    &__btn {
+    &__button {
+        width: 240px;
+        height: 64px;
+        background: #fff;
+        color: #242528;
+        font-size: 23px;
+        font-weight: 600;
+        border: none;
+        outline: none;
+        cursor: pointer;
         margin-top: 50px;
-        a {
-            display: block;
-            padding: 15px 55px;
-            background: #fff;
-            font-size: 23px;
-            font-weight: 600;
-            line-height: normal;
-            color: #242528;
-            text-align: center;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all .5s linear;
-            &:hover {
-                background: #000;
-                color: #fff;
-            }
+        transition: all .5s linear;
+
+        &:hover {
+            background: #000;
+            color: #fff;
         }
     }
 }

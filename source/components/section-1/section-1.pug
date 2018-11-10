@@ -2,11 +2,12 @@ include ../counter/counter
 
 mixin section-1
     section.section-1#home
+
         div.section-1__container
             div.section-1__content
                 div.section-1__date DECEMBER 3–6
                 h1.section-1__title New Economy Online Conference
                 div.section-1__text Register for a conference and get <br> ultimate guide to crypto investment
-                div.section-1__button: a(href="#access") Get free access
+                button.section-1__button Get free access
                 div.section-1__counter
-                   +counter("clockdiv", "deadline-message")
+                    +counter("clockdiv", "deadline-message")

@@ -54,17 +54,21 @@
             font-size: 16px;
         }
     }
-    &__btn {
+    &__button {
+        width: 240px;
+        height: 64px;
+        background: #ED0058;
+        color: #fff;
+        font-weight: 600;
+        font-size: 23px;
+        border: none;
+        outline: none;
+        cursor: pointer;
         margin-top: 60px;
-        a {
-            padding: 18px 45px;
-            color: #fff;
-            background: #ED0058;
-            text-decoration: none;
-            transition: all .5s linear;
-            &:hover {
-                background: #000;
-            }
+        transition: all .5s linear;
+
+        &:hover {
+            background: #000;
         }
     }
 }

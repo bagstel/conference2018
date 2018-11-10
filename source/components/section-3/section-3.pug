@@ -1,7 +1,7 @@
 mixin speaker(data)
     .speaker
         .speaker__photo
-            img(src="../images/" + data.photo + ".png")
+            img(src="../images/" + data.photo + ".png", alt="")
         .speaker__info
             h3.speaker__name= data.name
             p.speaker__descr= data.descr

@@ -2,6 +2,8 @@
     &__container {
         background: url("../images/erth.png") no-repeat center/cover;
         background-attachment: fixed;
+        z-index: 10;
+        padding-top: 70px;
     }
     &__content {
         max-width: 1440px;
@@ -40,23 +42,19 @@
         }
     }
     &__button {
+        width: 240px;
+        height: 64px;
+        background: #ED0058;
+        color: #fff;
+        font-size: 23px;
+        border: none;
+        outline: none;
+        cursor: pointer;
         margin-bottom: 60px;
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 240px;
-            height: 64px;
-            background: #ED0058;
-            color: #fff;
-            font-size: 23px;
-            text-decoration: none;
-            transition: all .5s linear;
-        }
+        transition: all .5s linear;
+
         &:hover {
-            a {
-                background: #000;
-            }
+            background: #000;
         }
     }
     &__counter {

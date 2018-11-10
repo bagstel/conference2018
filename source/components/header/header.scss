@@ -59,7 +59,6 @@
                 &__item {
                     margin: 0;
                     width: 100%;
-
                     a {
                         padding-left: 0;
                         padding-right: 0;
@@ -84,16 +83,18 @@
             font-size: 18px;
             text-decoration: none;
             padding: 8px 15px;
-        }
-        &--active,
-        a:hover {
-            color: #fff;
-            a {
+            transition: all .5s linear;
+
+            &:hover {
                 color: #fff;
             }
         }
-        &:last-child {
+        &--active a {
             background: #ED0058;
+            color: #fff;
+            &:hover {
+                color: #A2BEEE;
+            }
         }
     }
 
@@ -104,16 +105,12 @@
 
 .burger {
     position: relative;
-    right: 25px;
     transition: all 0.3s ease-in-out;
     z-index: 100;
     display: none;
 
     @include laptop {
         display: block;
-    }
-    @include tablets {
-        right: 25px;
     }
 
     &:hover {
@@ -122,11 +119,7 @@
     &.active {
         position: fixed;
         top: 18px;
-        right: 45px;
-
-        @include tablets {
-            right: 25px;
-        }
+        right: 20px;
 
         .line {
             width: 30px;
