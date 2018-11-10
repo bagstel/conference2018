@@ -113,20 +113,41 @@ for (let n = 0; n < links.length; n++) {
             let header = document.querySelector(".header__content");
             let heightHeader = header.offsetHeight;
 
-            r = r - heightHeader;   // корректировка на высоту header, который имеет position:fixed;
-
-            window.scrollTo(0, r);
-            r = r + heightHeader;
+            window.scrollTo(0, r - heightHeader); //корректировка на высоту header, который имеет position:fixed;
 
             if (r !== w + t) {
-                requestAnimationFrame(step)
+                requestAnimationFrame(step);
             }
             else {
                 location.hash = hash;
             }
+
         }
     });
 }
+
+
+//program
+// const program = document.querySelector('.program__list');
+// const items = program.querySelectorAll('.program__item');
+//
+// let toggle = function (e) {
+//     let target = e.target;
+//     let trigger = target.closest('.program__trigger');
+//     let active = target.closest('.program__item');
+//     if (!trigger) return;
+//     // if (active.classList.contains('program__item--active')) {
+//     //     active.classList.remove('program__item--active');
+//     // } else {
+//         items.forEach(item => {
+//             item.classList.remove('program__item--active');
+//         });
+//         active.classList.add('program__item--active');
+//     // }
+// };
+//
+// program.addEventListener('click', toggle);
+
 
 const program = document.querySelectorAll('.trigger');
 

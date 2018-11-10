@@ -1,7 +1,5 @@
 .header {
-    &:before {
-        content: '';
-        display: block;
+    &__bg {
         height: 70px;
     }
     &__container {
@@ -86,18 +84,15 @@
             font-size: 18px;
             text-decoration: none;
             padding: 8px 15px;
-            transition: all 0.3s ease-in-out;
-            &:hover {
+        }
+        &--active,
+        a:hover {
+            color: #fff;
+            a {
                 color: #fff;
             }
         }
-        &--active a {
-            color: #fff;
-            &:hover {
-                color: #A2BEEE;
-            }
-        }
-        &--active {
+        &:last-child {
             background: #ED0058;
         }
     }

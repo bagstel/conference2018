@@ -7,6 +7,7 @@ mixin table-header(data)
                 div.table-head__text DAY
                 div.table-head__digit= data
 
+
 mixin block-1 (data)
     - var active = data == 1 ? ' active' : '';
     td(class="column column-" + data + active).table-body__cell
@@ -20,6 +21,7 @@ mixin block-1 (data)
                     p Agenda of the Day
                     p Sponsors Announcement
             div.table-body__footer 45 min
+
 
 mixin block-2 (data)
     - var active = data == 1 ? ' active' : '';

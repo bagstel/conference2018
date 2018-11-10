@@ -6,6 +6,10 @@
         max-width: 1440px;
         margin: 0 auto;
         padding: 40px;
+
+        @include tablets {
+            padding: 40px 20px;
+        }
     }
 }
 
@@ -23,18 +27,20 @@ $timer: 3s;
             display: block;
         }
         .table-head__day {
-            float: right;
+            //float: right;
         }
         .table-body__wrapper {
             position: static;
             opacity: 1;
         }
-
     }
 }
 
 .active {
-
+    &.table-head__cell,
+    &.table-body__cell {
+        display: block;
+    }
     &.table-head__cell {
         background: #2C109F;
     }
@@ -45,13 +51,13 @@ $timer: 3s;
         display: block;
     }
     .table-head__day {
-        float: right;
+        width: auto;
+        //float: right;
     }
     .table-body__wrapper {
         position: static;
         opacity: 1;
     }
-
 }
 
 .section-6 {
@@ -83,38 +89,77 @@ $timer: 3s;
         color: #fff;
         &__wrapper {
             @include clearfix;
-            padding: 10px 15px 5px;
+            padding: 10px 0;
         }
         &__cell {
             //transition: width 1s linear;
             width: 60px;
             background: #969797;
             cursor: pointer;
-
             &.active {
-                width: calc(100% - 180px);
+                width: 100%;
+                //width: calc(100% - 180px);
+            }
+
+            @media screen and (max-width: 667px) {
+                display: none;
+                &.active {
+                    width: 100%;
+                }
             }
         }
+        &__wrapper {
+            display: flex;
+            align-items: center;
+        }
         &__date {
-            float: left;
+            //float: left;
             display: none;
-            width: calc(100% - 60px);
-            margin-top: 25px;
+            width: 100%;
+            //width: calc(100% - 57px);
+            //margin-top: 25px;
         }
         &__day {
-            float: none;
+            //float: none;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include tablets {
+                transform: rotate(-90deg);
+                flex-direction: row;
+                margin: 10px 0;
+            }
         }
         &__text {
             font-weight: 600;
             font-size: 20px;
+            line-height: normal;
+
+            @include tablets {
+                font-size: 16px;
+            }
         }
         &__digit {
-
             font-weight: bold;
             font-size: 50px;
+            line-height: 50px;
+            margin: 0;
+            padding: 0;
+
+            @include tablets {
+                padding-left: 10px;
+                font-size: 35px;
+            }
         }
     }
     &-body {
+        &__cell {
+            @media screen and (max-width: 667px) {
+                display: none;
+            }
+        }
         &__wrapper {
             top: 0;
             left: 0;
@@ -138,6 +183,10 @@ $timer: 3s;
                     margin-right: 10px;
                 }
             }
+
+            @media screen and (max-width: 667px) {
+                display: none;
+            }
         }
         &__content {
             float: right;
@@ -153,6 +202,12 @@ $timer: 3s;
                 padding: 0;
                 font-size: 23px;
                 line-height: 1.4;
+            }
+
+            @media screen and (max-width: 667px) {
+                margin-left: 0;
+                float: none;
+                width: 100%
             }
         }
         &__anonymous {
