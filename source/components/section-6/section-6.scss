@@ -1,15 +1,13 @@
 .section-6 {
-    &__container {
-        background: #fff;
+    background: #fff;
+    padding: 40px;
+    @include tablets {
+        padding: 40px 20px;
     }
     &__content {
+        padding-top: 20px;
         max-width: 1440px;
         margin: 0 auto;
-        padding: 40px;
-
-        @include tablets {
-            padding: 40px 20px;
-        }
     }
     &__title {
         display: flex;
@@ -23,10 +21,22 @@
             color: #242424;
         }
         .trigger {
-            background: #000;
-            width: 18px;
-            height: 18px;
+            display: none;
+            width: auto;
+            height: 50px;
             margin: 0 20px;
+            cursor: pointer;
+            svg {
+                height: 100%;
+                width: auto;
+                &:hover {
+                   opacit: 0.7;
+                }
+            }
+
+            @media screen and (max-width: 667px) {
+                display: block;
+            }
         }
     }
     table, tr, th, td {
@@ -47,48 +57,44 @@
 .active {
     &.table-head__cell,
     &.table-body__cell {
-            display: block;
-            position: static;
+        display: block;
+        position: static;
+    }
+    &.table-head__cell {
+        background: #2C109F;
+        width: 100%;
+        transition: background 0.3s linear;
+    }
+    .table-head__wrapper {
+        color: #A2BEEE;
+        padding: 0 10px;
+    }
+    .table-head__date {
+        display: block;
+    }
+    .table-head__day {
+        width: auto;
+        @include tablets {
+            transform: rotate(0);
+            flex-direction: column;
+            margin: 10px 0;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: normal;
+        }
+    }
+    .table-head__digit {
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 50px;
+        @include tablets {
+            padding: 0;
+        }
     }
     .table-body__wrapper {
         position: static;
         opacity: 1;
-    }
-    &.table {
-        &-head__cell {
-            background: #2C109F;
-            width: 100%;
-            transition: width 3s linear;
-        }
-
-        &-head__wrapper {
-            color: #A2BEEE;
-            padding: 0 10px;
-        }
-        &-head__date {
-            display: block;
-        }
-        &-head {
-            &__day {
-                width: auto;
-                @include tablets {
-                    transform: rotate(0);
-                    flex-direction: column;
-                    margin: 10px 0;
-                    font-weight: 600;
-                    font-size: 20px;
-                    line-height: normal;
-                }
-            }
-            &__digit {
-                font-weight: bold;
-                font-size: 50px;
-                line-height: 50px;
-                @include tablets {
-                    padding: 0;
-                }
-            }
-        }
+        transition: opacity 0.3s linear;
     }
 
 }

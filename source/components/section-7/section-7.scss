@@ -1,16 +1,16 @@
 .section-7 {
-    &__container {
-        background: url("../images/bgblue.png") no-repeat center/cover;
-    }
+    background: url("../images/bgblue.png") no-repeat center/cover;
+    padding: 60px 40px;
     &__content {
+        padding-top: 20px;
         max-width: 1440px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 60px 40px;
     }
     &__subtitle {
+        padding-top: 20px;
         font-size: 36px;
         color: #FFFFFF;
         @include tablets {
