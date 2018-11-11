@@ -83,13 +83,13 @@ gulp.task('scss', () => {
                 }
             })
         }))
-        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.init({includeContent: true, sourceRoot: '/source'}))
         .pipe(scss({
             outputStyle: isDev ? '' : 'compressed'
         }))
         .pipe(autoprefixer({
             browsers: ['last 6 versions'],
-            cascade: false
+            cascade: true
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.dest.css))
@@ -148,6 +148,14 @@ gulp.task('sprite', callback => {
 gulp.task('copy:images', () => {
     return gulp
         .src(paths.source.images)
+        .pipe(gulp.dest(paths.dest.images))
+        .pipe(browserSync.stream());
+});
+
+/* *************** Copy images and optimize *************** */
+gulp.task('copy:imagemin', () => {
+    return gulp
+        .src(paths.source.images)
         .pipe(imagemin())
         .pipe(gulp.dest(paths.dest.images))
         .pipe(browserSync.stream());
@@ -188,5 +196,13 @@ gulp.task('default', callback => {
 /* *************** Production mode *************** */
 gulp.task('prod', callback => {
     isDev = false;
-    gulp.start('default');
+
+    runSequence(
+        'clean:public',
+        'copy:imagemin',
+        ['copy:fonts','sprite'],
+        ['scss', 'pug', 'js'],
+        'server',
+        callback
+    );
 });
