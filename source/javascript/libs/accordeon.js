@@ -16,7 +16,7 @@ module.exports = (function () {
                 stash = current >= columns.length ? 1 : current + 1;
                 break;
             default :
-                stash = control;
+                stash = +control;
         }
 
         const currentItems = document.querySelectorAll(`.column-${current}`);

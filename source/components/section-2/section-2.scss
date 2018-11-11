@@ -1,6 +1,6 @@
 .section-2 {
     &__container {
-        background: url("../images/Img-record.png") no-repeat center/cover;
+        background: url("../images/record.png") no-repeat center/cover;
     }
     &__content {
         max-width: 1440px;
@@ -57,13 +57,11 @@
         }
         &:before {
             left: -40px;
-            background: url("../images/Vector-left.png") no-repeat center;
-            background-size: cover;
+            @include sprite($wreath-left);
         }
         &:after {
             right: -35px;
-            background: url("../images/Vector-right.png") no-repeat center;
-            background-size: cover;
+            @include sprite($wreath-right);
         }
         @media screen and (min-width: 1441px) {
             width: 32.98%;

@@ -66,32 +66,17 @@
         }
         &-item {
             list-style: none;
-            margin-left: 15px;
-            &:first-child {
-                margin: 0;
-            }
-            .icon {
+            margin-right: 15px;
+            &.icon {
                 &-laptop {
-                    display: block;
-                    width: 85.29px;
-                    height: 41px;
-                    background: url("../images/laptop.png") no-repeat center;
-                    background-size: cover;
+                    @include sprite($laptop);
                 }
                 &-tablet {
-                    display: block;
-                    width: 58.6px;
-                    height: 41px;
-                    background: url("../images/tablet.png") no-repeat center;
-                    background-size: cover;
+                    @include sprite($tablet);
                 }
                 &-smartphone {
-                    display: block;
+                    @include sprite($smartphone);
                     margin-left: 10px;
-                    width: 23.96px;
-                    height: 41px;
-                    background: url("../images/smartphone.png") no-repeat center;
-                    background-size: cover;
                 }
             }
         }

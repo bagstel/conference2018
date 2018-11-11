@@ -1,0 +1,145 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$laptop-name: 'laptop';
+$laptop-x: 0px;
+$laptop-y: 103px;
+$laptop-offset-x: 0px;
+$laptop-offset-y: -103px;
+$laptop-width: 87px;
+$laptop-height: 42px;
+$laptop-total-width: 400px;
+$laptop-total-height: 212px;
+$laptop-image: 'sprite.png';
+$laptop: (0px, 103px, 0px, -103px, 87px, 42px, 400px, 212px, 'sprite.png', 'laptop', );
+$logo-name: 'logo';
+$logo-x: 0px;
+$logo-y: 0px;
+$logo-offset-x: 0px;
+$logo-offset-y: 0px;
+$logo-width: 400px;
+$logo-height: 103px;
+$logo-total-width: 400px;
+$logo-total-height: 212px;
+$logo-image: 'sprite.png';
+$logo: (0px, 0px, 0px, 0px, 400px, 103px, 400px, 212px, 'sprite.png', 'logo', );
+$smartphone-name: 'smartphone';
+$smartphone-x: 146px;
+$smartphone-y: 103px;
+$smartphone-offset-x: -146px;
+$smartphone-offset-y: -103px;
+$smartphone-width: 24px;
+$smartphone-height: 42px;
+$smartphone-total-width: 400px;
+$smartphone-total-height: 212px;
+$smartphone-image: 'sprite.png';
+$smartphone: (146px, 103px, -146px, -103px, 24px, 42px, 400px, 212px, 'sprite.png', 'smartphone', );
+$tablet-name: 'tablet';
+$tablet-x: 87px;
+$tablet-y: 103px;
+$tablet-offset-x: -87px;
+$tablet-offset-y: -103px;
+$tablet-width: 59px;
+$tablet-height: 42px;
+$tablet-total-width: 400px;
+$tablet-total-height: 212px;
+$tablet-image: 'sprite.png';
+$tablet: (87px, 103px, -87px, -103px, 59px, 42px, 400px, 212px, 'sprite.png', 'tablet', );
+$wreath-left-name: 'wreath-left';
+$wreath-left-x: 0px;
+$wreath-left-y: 145px;
+$wreath-left-offset-x: 0px;
+$wreath-left-offset-y: -145px;
+$wreath-left-width: 44px;
+$wreath-left-height: 67px;
+$wreath-left-total-width: 400px;
+$wreath-left-total-height: 212px;
+$wreath-left-image: 'sprite.png';
+$wreath-left: (0px, 145px, 0px, -145px, 44px, 67px, 400px, 212px, 'sprite.png', 'wreath-left', );
+$wreath-right-name: 'wreath-right';
+$wreath-right-x: 44px;
+$wreath-right-y: 145px;
+$wreath-right-offset-x: -44px;
+$wreath-right-offset-y: -145px;
+$wreath-right-width: 44px;
+$wreath-right-height: 67px;
+$wreath-right-total-width: 400px;
+$wreath-right-total-height: 212px;
+$wreath-right-image: 'sprite.png';
+$wreath-right: (44px, 145px, -44px, -145px, 44px, 67px, 400px, 212px, 'sprite.png', 'wreath-right', );
+$spritesheet-width: 400px;
+$spritesheet-height: 212px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($laptop, $logo, $smartphone, $tablet, $wreath-left, $wreath-right, );
+$spritesheet: (400px, 212px, 'sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
