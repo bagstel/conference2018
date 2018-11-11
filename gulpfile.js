@@ -234,7 +234,7 @@ gulp.task('prod', callback => {
     runSequence(
         'clean:public',
         'copy:imagemin',
-        ['copy:fonts','sprite'],
+        ['copy:fonts','sprite:bitmap','sprite:svg'],
         ['scss', 'pug', 'js'],
         'server',
         callback
