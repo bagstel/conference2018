@@ -1,7 +1,7 @@
 mixin table-header(data)
     - var active = data == 1 ? ' active' : '';
     th(class="column column-" + data + active).table-head__cell
-        div(data-column= data).table-head__wrapper.trigger
+        div(data-control= data).table-head__wrapper.trigger
             div.table-head__date December #{data + 2} rd
             div.table-head__day
                 div.table-head__text DAY
@@ -10,13 +10,13 @@ mixin table-header(data)
 
 mixin block-1 (data)
     - var active = data == 1 ? ' active' : '';
-    td(class="column column-" + data + active).table-body__cell
+    td(class="column-" + data + active).table-body__cell
         div(data-column= data).table-body__wrapper
             div.table-body__container
                 div.table-body__image
                     img(src="./images/avatar-black.png", alt="")
                 div.table-body__content
-                    h4 Welcome
+                    h4 Welcome #{data}
                     p Welcome Words
                     p Agenda of the Day
                     p Sponsors Announcement
@@ -25,13 +25,13 @@ mixin block-1 (data)
 
 mixin block-2 (data)
     - var active = data == 1 ? ' active' : '';
-    td(class="column column-" + data + active).table-body__cell
+    td(class="column-" + data + active).table-body__cell
         div(data-column= data).table-body__wrapper
             div.table-body__container
                 div.table-body__image
                     img(src="./images/avatar-gray.png", alt="")
                 div.table-body__content
-                    h4 Welcome
+                    h4 Welcome #{data}
                     p Welcome Words
                     p Agenda of the Day
                     div.table-body__anonymous Anonymous
@@ -41,7 +41,7 @@ mixin block-2 (data)
 
 mixin block-3 (data)
     - var active = data == 1 ? ' active' : '';
-    td(class="column column-" + data + active).table-body__cell
+    td(class="column-" + data + active).table-body__cell
         div(data-column= data).table-body__wrapper
             div.table-body__container
                 div.table-body__image--group
@@ -52,7 +52,7 @@ mixin block-3 (data)
                     div.table-body__image
                         img(src="./images/avatar-gray.png", alt="")
                 div.table-body__content
-                    h4 Welcome
+                    h4 Welcome #{data}
                     p Welcome Words
                     p Agenda of the Day
                     div.table-body__anonymous Anonymous
@@ -64,7 +64,10 @@ mixin section-6
     section.section-6#program
         div.section-6__container
             div.section-6__content
-                h3.section-6__title Program
+                div.section-6__title
+                    div(data-control="left").trigger
+                    h3 Program
+                    div(data-control="right").trigger
 
                 table
                     tr.table-head
