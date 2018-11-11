@@ -11,9 +11,14 @@ const scss = require('gulp-sass');
 const pug = require('gulp-pug');
 const gulp = require('gulp');
 const del = require('del');
-const sprite = require('gulp.spritesmith');
+const spriteBitmap = require('gulp.spritesmith');
+const svgSprite = require('gulp-svg-sprite');
 const responsive = require('gulp-responsive');
 const imagemin = require('gulp-imagemin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
+const svgmin = require('gulp-svgmin');
+
 
 let isDev = true;
 let isTunnel = false;
@@ -25,8 +30,8 @@ const paths = {
         js: './source/javascript/**/*.js',
         images: './source/static/images/general/**/*.*',
         sprite: {
-            bitmap: './source/static/sprite/bitmap/**/*.*',
-            svg: './source/static/sprite/svg/**/*.*',
+            bitmap: './source/static/sprites/bitmap/**/*.*',
+            svg: './source/static/sprites/svg/**/*.*',
         },
         fonts: './source/static/fonts/**/*.*'
     },
@@ -132,16 +137,45 @@ gulp.task('js', () => {
         .pipe(browserSync.stream());
 });
 
-/* ************** Sprites **************** */
-gulp.task('sprite', callback => {
+/* ************** Sprites bitmap **************** */
+gulp.task('sprite:bitmap', callback => {
     const spriteData = gulp.src(paths.source.sprite.bitmap)
-        .pipe(sprite({
+        .pipe(spriteBitmap({
             imgName: 'sprite.png',
             cssName: 'sprite.scss'
         }));
     spriteData.img.pipe(gulp.dest(paths.dest.sprite.images));
     spriteData.css.pipe(gulp.dest(paths.dest.sprite.scss));
     callback();
+});
+
+/* ************** Sprites SVG **************** */
+gulp.task('sprite:svg', () => {
+    return gulp
+        .src(paths.source.sprite.svg)
+        .pipe(svgmin({
+            js2svg: {
+                pretty: isDev
+            }
+        }))
+        .pipe(cheerio({
+            run: function ($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+            },
+            parserOptions: { xmlMode: true }
+        }))
+        .pipe(replace('&gt;', '>'))
+        .pipe(svgSprite({
+            mode: {
+                symbol: {
+                    sprite: 'sprite.svg'
+                }
+            }
+        }))
+        .pipe(gulp.dest(paths.dest.sprite.images))
+        .pipe(browserSync.stream());
 });
 
 /* *************** Copy images *************** */
@@ -177,7 +211,7 @@ gulp.task('default', callback => {
 
     runSequence(
         'clean:public',
-        'sprite',
+        ['sprite:bitmap','sprite:svg'],
         ['scss', 'pug', 'js'],
         ['copy:images', 'copy:fonts'],
         'server',
