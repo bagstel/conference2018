@@ -67,9 +67,6 @@
         &-item {
             list-style: none;
             margin-right: 15px;
-            //&:first-child {
-            //    margin: 0;
-            //}
             &.icon {
                 &-laptop {
                     @include sprite($laptop);
