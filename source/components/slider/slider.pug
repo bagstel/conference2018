@@ -1,0 +1,26 @@
+mixin slider
+
+    section.section
+        div.section__container
+            div.section__title Speakers
+            div.carousel
+                div.carousel__wrapper
+                    ul.carousel__list
+                        - for (var index = 0; index < data.items.length; index++)
+                            li.carousel__item
+                                div.speaker
+                                    ul.speaker__list
+                                        each item in data.items[index]
+                                            li.speaker__item
+                                                .speaker__photo
+                                                    img(src="../images/" + item.photo + ".png")
+                                                .speaker__info
+                                                    h3.speaker__name= item.name
+                                                    p.speaker__descr= item.descr
+                div.control
+                    .control--prev
+                        svg(width="55" height="140" viewBox="0 0 55 140" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M53.2821 138.841L1.36549 69.9996L53.2821 1.1586" stroke="#5E5E5F" stroke-width="2" stroke-miterlimit="10")
+                    .control--next
+                        svg(width="55" height="140" viewBox="0 0 55 140" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M1.72046 1.15955L53.6372 70.0007L1.72046 138.842" stroke="#5E5E5F" stroke-width="2" stroke-miterlimit="10")

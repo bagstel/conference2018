@@ -1,0 +1,23 @@
+{
+  "watch": {
+    "pug": ["./source/components/**/*.pug", "./source/pages/**/*.pug"],
+    "scss": ["./source/components/**/*.scss", "./source/pages/**/*.scss"],
+    "js": "./source/javascript/**/*.js",
+    "fonts": "./source/static/fonts/**/*.*"
+  },
+  "source": {
+    "pug": ["./source/pages/*.pug"],
+    "scss": ["./source/pages/*.scss"],
+    "js": "./source/javascript/*.js",
+    "images": "./source/static/images/general/**/*.*",
+    "fonts": "./source/static/fonts/**/*.*"
+  },
+  "dest": {
+    "baseDir": "./public/",
+    "html": "./public/",
+    "css": "./public/css/",
+    "js": "./public/js/",
+    "images": "./public/images/",
+    "fonts": "./public/fonts/"
+  }
+}

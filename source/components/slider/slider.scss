@@ -1,0 +1,105 @@
+.section {
+    padding-top: 45px;
+    &__title {
+        font-weight: bold;
+        font-size: 70px;
+        text-align: center;
+        color: #242424;
+        margin-bottom: 45px;
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 1115px;
+    margin: 0 auto;
+    &__wrapper {
+        overflow: hidden;
+    }
+    &__list {
+        width: 9999px;
+        transition: margin .55s;
+    }
+    &__item {
+        margin-right: 40px;
+        display: inline-block;
+    }
+}
+
+.speaker {
+    text-align: center;
+
+    &__item {
+        width: 342px;
+        margin-bottom: 40px;
+    }
+    &__info {
+        background: #fff;
+        padding: 30px 10px 30px;
+    }
+    &__name {
+        font-weight: 600;
+        font-size: 23px;
+        color: #242528;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    &__descr {
+        font-size: 18px;
+        line-height: 26px;
+        color: #969797;
+        margin-bottom: 0;
+
+    }
+}
+
+.control {
+    &--prev,
+    &--next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 80px;
+        cursor: pointer;
+        svg {
+            height: 100%;
+            width: auto;
+        }
+    }
+    &:hover {
+        opacity: .5;
+    }
+    &--prev {
+        left: -60px;
+    }
+    &--next {
+        right: -60px;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .carousel {
+        width: 730px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .carousel {
+        width: 345px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .control {
+        &--prev,
+        &--next {
+            height: 60px;
+        }
+        &--prev {
+            left: -40px;
+        }
+        &--next {
+            right: -40px;
+        }
+    }
+}

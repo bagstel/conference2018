@@ -114,7 +114,10 @@ gulp.task('pug', () => {
             })
         }))
         .pipe(pug({
-            pretty: isDev
+            locals: {
+                data: JSON.parse(require('fs').readFileSync('./data/data.json', 'utf8'))
+            },
+            pretty: true
         }))
         .pipe(gulp.dest(paths.dest.html))
         .pipe(browserSync.stream())
